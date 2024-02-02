@@ -15,22 +15,41 @@ const About = () => {
             </div>
 
             <p className="text-xl mt-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Etiam tempus pulvinar ligula a suscipit. Cras vel vulputate tellus. 
-                Maecenas at nunc eros. Nunc non diam porta, euismod mi vitae, tristique 
-                justo. In vel euismod massa, eu sollicitudin nunc. Aliquam lacinia auctor 
-                sem eu blandit. Integer dapibus enim risus. Nunc sed.
+                <div><h4 className="font-bold text-2xl">CURRENT:</h4></div>
+                SDE Intern @Numeric Infosystem Pvt. Ltd.
+                <br />
+                Role: Full Stack Web Developer
+                <br />
+                From: 2023 - 2024 (current)
             </p>
+
+            <p className="text-xl mt-10">
+                <div><h4 className="font-bold text-2xl">HIGHER:</h4></div>
+                JIWAJI UNIVERSITY
+                <br />
+                Bachelor's in Computer Application
+                <br />
+                2021 - 2024 (expected)
+                <br />
+                GPA: 7.7
+            </p>
+            
 
             <br />
-
-            <p className="text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Etiam tempus pulvinar ligula a suscipit. Cras vel vulputate tellus. 
-                Maecenas at nunc eros. Nunc non diam porta, euismod mi vitae, tristique 
-                justo. In vel euismod massa, eu sollicitudin nunc. Aliquam lacinia auctor 
-                sem eu blandit. Integer dapibus enim risus. Nunc sed.
+            <p className="text-xl mt-10">
+                <div><h4 className="font-bold text-2xl">INTERMEDIATE (12th):</h4></div>
+                San Marino Public Higher Secondry School
+                <br />
+                Commerce + Maths with 74%
             </p>
+            <br />
+            <p className="text-xl mt-10">
+                <div><h4 className="font-bold text-2xl">PRIMARY EDUCATION (10th):</h4></div>
+                San Marino Public Higher Secondry School
+                <br />
+                - with 72%
+            </p>
+            
         </div>
     </div>)
 }

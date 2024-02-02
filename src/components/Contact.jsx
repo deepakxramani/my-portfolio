@@ -5,7 +5,7 @@ export const Contact = () => {
     <div
       name="contact"
       className="w-full h-screen
-    bg-gradient-to-b from-black to-gray-800 p-4 text-white"
+      bg-gradient-to-b from-black to-gray-800 p-4 text-white pt-10  sm:pt-10"
     >
       <div
         className="flex flex-col p-4 justify-center
