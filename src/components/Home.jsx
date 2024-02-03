@@ -49,7 +49,12 @@ const Home = () => {
                 </div>
             </div>
             
-            <Tilt>
+            <Tilt
+            glareEnable={true} 
+            glareMaxOpacity={0.8} 
+            glareColor="#ffffff" 
+            glarePosition="bottom" 
+            glareBorderRadius="20px">
             <div className='hover:drop-shadow-2xl'>
                 
             
