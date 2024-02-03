@@ -4,9 +4,7 @@ import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
 import TypedText from './TypedText';
 import './waving-emoji.css'
 import { Link } from "react-scroll"
-
-import Hover from 'react-3d-hover';
-
+import Tilt from 'react-parallax-tilt';
 
 
 
@@ -51,15 +49,16 @@ const Home = () => {
                 </div>
             </div>
             
-            <Hover scale={1.07} perspective={400} speed={700} >
+            <Tilt>
             <div className='hover:drop-shadow-2xl'>
                 
-                
+            
                 <img src={HeroImage} style={{width:300,}} alt="my profile"
                     className='rounded-2xl mx-auto w-2/3 md:w-full'/>
+                    
                 
             </div>
-            </Hover>
+            </Tilt>
         </div>
     </div>
   )
