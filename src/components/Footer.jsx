@@ -35,7 +35,7 @@ export const Footer = () => {
         
     <div className='mx-auto flex items-center justify-center flex-col text-center m-10'>
         <h2 className='text-4xl font-bold capitalize leading-10'>Deepak Ramani</h2>
-        <p className='my-2 mx-auto' style={{color:'#cacdd2'}}>"I'm not gonna run away!"</p>
+        <p className='my-2 mx-auto' style={{color:'#cacdd2'}}>"I'm not gonna run away, I never go back on my word! That's my nindo: my ninja way!"</p>
         <div>
         <ul className="flex flex-col text-center">
         {links.map(({id,link})=>(
