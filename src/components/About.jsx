@@ -9,7 +9,7 @@ const About = () => {
         flex flex-col justify-center w-full h-fit py-40">
             <div className="pb-8">
                 <p className="text-4xl font-bold inline border-b-4
-                border-gray-500 ">
+                border-gray-500">
                     About
                 </p>
             </div>
