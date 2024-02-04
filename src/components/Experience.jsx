@@ -63,7 +63,7 @@ export const Experience = () => {
   return (
     <div
       name="experience"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen pt-40"
+      className="bg-gradient-to-b from-gray-800 to-black w-full h-fit pt-20"
     >
       <div
         className="max-w-screen-lg mx-auto  p-4 flex flex-col

@@ -4,12 +4,12 @@ export const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen
-      bg-gradient-to-b from-black to-gray-800 p-4 text-white py-20"
+      className="w-full h-fit
+      bg-gradient-to-b from-black to-gray-800 p-4 text-white pt-20"
     >
       <div
         className="flex flex-col p-4 justify-center
-      max-w-screen-lg mx-auto h-full"
+      max-w-screen-lg mx-auto h-fit"
       >
         <div className="pb-8">
           <p
