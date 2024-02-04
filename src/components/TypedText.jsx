@@ -8,11 +8,11 @@ function TypedText() {
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ['Web Developer', 'Video Editor', 'Graphic Designer'],
-      typeSpeed: 100,
-      backSpeed: 80,
+      typeSpeed: 80,
+      backSpeed: 30,
       backDelay: 2000,
-
       loop: true,
+      
     });
 
     return () => {
