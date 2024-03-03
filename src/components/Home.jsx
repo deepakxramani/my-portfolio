@@ -14,12 +14,12 @@ import ScrollReveal from 'scrollreveal';
 const Home = () => {
 
     useEffect(()=>{
-        ScrollReveal().reveal('.hi-text', {origin: 'top',distance: '80px',duration: 2000, delay:100,reset: true });
-        ScrollReveal().reveal('.feature-name', {origin: 'top',distance: '100px',duration: 2000, delay:200,reset: true });
-        ScrollReveal().reveal('.feature-role', {origin: 'top',distance: '120px',duration: 2000, delay:300,reset: true });
-        ScrollReveal().reveal('.feature-info', {origin: 'top',distance: '140px',duration: 2000, delay:400,reset: true });
-        ScrollReveal().reveal('.feature-btn', {origin: 'top',distance: '160px',duration: 2000, delay:500,reset: true });
-        ScrollReveal().reveal('.hero-image', {origin: 'top',distance: '180px',duration: 2000, delay:600,reset: true });
+        ScrollReveal().reveal('.hi-text', {origin: 'top',distance: '80px',duration: 2000,reset: true });
+        ScrollReveal().reveal('.feature-name', {origin: 'top',distance: '100px',duration: 2000, delay:80,reset: true });
+        ScrollReveal().reveal('.feature-role', {origin: 'top',distance: '120px',duration: 2000, delay:100,reset: true });
+        ScrollReveal().reveal('.feature-info', {origin: 'top',distance: '140px',duration: 2000, delay:120,reset: true });
+        ScrollReveal().reveal('.feature-btn', {origin: 'top',distance: '160px',duration: 2000, delay:140,reset: true });
+        ScrollReveal().reveal('.hero-image', {origin: 'top',distance: '180px',duration: 2000, delay:160,reset: true });
 
 
     },[]) 
@@ -83,7 +83,7 @@ const Home = () => {
             glarePosition="bottom" 
             glareBorderRadius="20px" 
             className='hero-image mt-4 sm:m-none'>
-            <div className='hover:drop-shadow-2xl  '>
+            <div className='hover:drop-shadow-2xl all ease-in-out duration-300'>
                 
             
                 <img src={HeroImage} style={{width:300,}} alt="my profile"

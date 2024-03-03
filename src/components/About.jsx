@@ -25,7 +25,7 @@ const About = () => {
             <div className="pb-8 about">
                 <p className="text-4xl font-bold inline border-b-4
                 border-gray-500 ">
-                    About
+                    About Me
                 </p>
             </div>
 

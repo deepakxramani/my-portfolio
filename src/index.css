@@ -9,3 +9,9 @@
     font-family: 'Raleway', sans-serif;
   }
 }
+
+.hideLinks {
+  @media (max-width: 767px) { /* Adjust breakpoint as needed */
+    display: none;
+  }
+}

@@ -1,9 +1,0 @@
-.slide-right {
-    transform: translateX(-20%);
-    transition: 3s ease-in-out;
-    
-  }
-  
-  .slide-right-hidden {
-    transform: translateX(100%);
-  }
