@@ -15,7 +15,7 @@ const Home = () => {
 
     useEffect(() => {
         const revealOnRefresh = () => {
-            ScrollReveal().reveal('.hi-text', {origin: 'top',distance: '80px',duration: 2000,delay:40,reset: true });
+            ScrollReveal().reveal('.hi-text', {origin: 'top',distance: '80px',duration: 2000,reset: true });
             ScrollReveal().reveal('.feature-name', {origin: 'top',distance: '100px',duration: 2000, delay:80,reset: true });
             ScrollReveal().reveal('.feature-role', {origin: 'top',distance: '120px',duration: 2000, delay:100,reset: true });
             ScrollReveal().reveal('.feature-info', {origin: 'top',distance: '140px',duration: 2000, delay:120,reset: true });
