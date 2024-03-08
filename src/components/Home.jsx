@@ -13,23 +13,16 @@ import ScrollReveal from 'scrollreveal';
 
 const Home = () => {
 
-    useEffect(() => {
-        const revealOnRefresh = () => {
-            ScrollReveal().reveal('.hi-text', {origin: 'top',distance: '80px',duration: 2000,reset: true });
-            ScrollReveal().reveal('.feature-name', {origin: 'top',distance: '100px',duration: 2000, delay:80,reset: true });
-            ScrollReveal().reveal('.feature-role', {origin: 'top',distance: '120px',duration: 2000, delay:100,reset: true });
-            ScrollReveal().reveal('.feature-info', {origin: 'top',distance: '140px',duration: 2000, delay:120,reset: true });
-            ScrollReveal().reveal('.feature-btn', {origin: 'top',distance: '160px',duration: 2000, delay:140,reset: true });
-            ScrollReveal().reveal('.hero-image', {origin: 'top',distance: '180px',duration: 2000, delay:160,reset: true });
-        };
-    
-        window.addEventListener('load', revealOnRefresh);
-    
-        // Cleanup function to remove the event listener
-        return () => {
-            window.removeEventListener('load', revealOnRefresh);
-        };
-    }, []);
+        useEffect(()=>{
+        ScrollReveal().reveal('.hi-text', {origin: 'top',distance: '80px',duration: 2000,reset: true });
+        ScrollReveal().reveal('.feature-name', {origin: 'top',distance: '100px',duration: 2000, delay:80,reset: true });
+        ScrollReveal().reveal('.feature-role', {origin: 'top',distance: '120px',duration: 2000, delay:100,reset: true });
+        ScrollReveal().reveal('.feature-info', {origin: 'top',distance: '140px',duration: 2000, delay:120,reset: true });
+        ScrollReveal().reveal('.feature-btn', {origin: 'top',distance: '160px',duration: 2000, delay:140,reset: true });
+        ScrollReveal().reveal('.hero-image', {origin: 'top',distance: '180px',duration: 2000, delay:160,reset: true });
+
+
+    },[])
 
    
     
