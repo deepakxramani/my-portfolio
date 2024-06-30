@@ -11,7 +11,7 @@
 }
 
 .hideLinks {
-  @media (max-width: 767px) { /* Adjust breakpoint as needed */
+  @media (max-width: 1024px) { /* Adjust breakpoint as needed */
     display: none;
   }
 }
