@@ -5,32 +5,51 @@ import navbar from "../assets/navbar.jpg"
 import reactParallax from "../assets/reactParallax.jpg"
 import reactSmooth from "../assets/reactSmooth.jpg"
 import reactWeather from "../assets/reactWeather.jpg"
+import calculateMe from "../assets/calculateMe.jpg"
 const Portfolio = () => {
 
   const portfolios = [
     {
       id: 1,
-      src: arrayDestruct
+      name: "Calculator App",
+      src: calculateMe,
+      demolink: "https://calculateme-deepakxramani.netlify.app/",
+      codelink: "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator",
     },
     {
       id: 2,
-      src: reactParallax
+      name: "Calculator App",
+      src: reactParallax,
+      demolink: "https://calculateme-deepakxramani.netlify.app/",
+      codelink: "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator",
     },
     {
       id: 3,
-      src: navbar
+      name: "Calculator App",
+      src: navbar,
+      demolink: "https://calculateme-deepakxramani.netlify.app/",
+      codelink: "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator",
     },
     {
       id: 4,
-      src: reactSmooth
+      name: "Calculator App",
+      src: reactSmooth,
+      demolink: "https://calculateme-deepakxramani.netlify.app/",
+      codelink: "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator",
     },
     {
       id: 5,
-      src: installNode
+      name: "Calculator App",
+      src: installNode,
+      demolink: "https://calculateme-deepakxramani.netlify.app/",
+      codelink: "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator",
     },
     {
       id: 6,
-      src: reactWeather
+      name: "Calculator App",
+      src: reactWeather,
+      demolink: "https://calculateme-deepakxramani.netlify.app/",
+      codelink: "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator",
     },
   ]
 
@@ -42,16 +61,16 @@ const Portfolio = () => {
           <p className="py-6">Check out some of my work right here</p>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.reverse().map(({ id, src,demolink,codelink }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg overflow-hidden object-fit">
               <img src={src} alt={`Project ${id}`} className="rounded-md duration-200 ease-in hover:scale-110 w-full h-48 object-cover" />
               <div className="flex items-center justify-center p-4">
                 <button className="w-1/2 px-6 py-3 m-4 bg-gradient-to-r
                     from-cyan-500 to-blue-500 cursor-pointer text-white rounded-md duration-200 hover:scale-105">
-                  Demo
+                  <a href={demolink} target='blank'>Demo</a>
                 </button>
                 <button className="w-1/2 px-6 py-3 m-4 bg-gray-800 border-solid border-2 border-sky-500 text-white rounded-md duration-200 hover:scale-105">
-                  Code
+                  <a href={codelink} target='blank'>Code</a>
                 </button>
               </div>
             </div>

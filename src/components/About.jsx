@@ -47,9 +47,9 @@ const About = () => {
                 <br />
                 Bachelor's in Computer Application
                 <br />
-                2021 - 2024 (expected)
+                2021 - 2024
                 <br />
-                GPA: 7.7
+                CGPA: 7.8
             </p>
             <div className="item2"><FaArrowUpLong className="my-10 text-3xl font-bold "/></div>
 
@@ -58,7 +58,7 @@ const About = () => {
                 border-gray-500 inline">INTERMEDIATE (12th):</h4></div>
                 San Marino Public Higher Secondry School
                 <br />
-                Commerce + Maths with 74%
+                Commerce + Maths 
             </p>
             <div className="item3"><FaArrowUpLong className="my-10 text-3xl font-bold "/></div>
             <p className="text-xl mt-10 item4">
@@ -66,7 +66,6 @@ const About = () => {
                 border-gray-500 inline">PRIMARY EDUCATION (10th):</h4></div>
                 San Marino Public Higher Secondry School
                 <br />
-                - with 72%
             </p>
             <div className="item4"><FaCircle className="my-10 text-xl font-bold"/></div>
 

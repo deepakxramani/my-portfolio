@@ -6,7 +6,8 @@ import './waving-emoji.css'
 import { Link } from "react-scroll"
 import Tilt from 'react-parallax-tilt';
 import { FaCloudDownloadAlt } from "react-icons/fa";
-import ScrollReveal from 'scrollreveal'; 
+import ScrollReveal from 'scrollreveal';
+import SocialLinks from './SocialLinks';
 
 
 

@@ -42,13 +42,13 @@ const SocialLinks = () => {
                     Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: 'resume.pdf',
+            href: 'https://drive.google.com/file/d/14LCAFWtgrf_3YYXpqS_GT87YVG4mgBqk/view?usp=drive_link',
             download: true,
         }
     ]
 
     return( 
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className="lg:flex max-sm:hidden md:hidden flex-col top-[35%] left-0 fixed">
         <ul>
 
             {links.map(({id, child, href, style, download}) => (
