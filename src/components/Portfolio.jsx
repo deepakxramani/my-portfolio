@@ -6,20 +6,21 @@ import reactParallax from "../assets/reactParallax.jpg"
 import reactSmooth from "../assets/reactSmooth.jpg"
 import reactWeather from "../assets/reactWeather.jpg"
 import calculateMe from "../assets/calculateMe.jpg"
+import MedBazzar from "../assets/medbazzar@1.25x.jpg"
 const Portfolio = () => {
 
   const portfolios = [
     {
       id: 1,
-      name: "Calculator App",
-      src: calculateMe,
-      demolink: "https://calculateme-deepakxramani.netlify.app/",
-      codelink: "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator",
+      name: "MedBazzar (E-Commerce Website)",
+      src: MedBazzar,
+      demolink: "https://medbazzar.netlify.app/",
+      codelink: "https://github.com/deepakxramani?tab=repositories",
     },
     {
       id: 2,
       name: "Calculator App",
-      src: reactParallax,
+      src: calculateMe,
       demolink: "https://calculateme-deepakxramani.netlify.app/",
       codelink: "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator",
     },
@@ -61,7 +62,7 @@ const Portfolio = () => {
           <p className="py-6">Check out some of my work right here</p>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.reverse().map(({ id, src,demolink,codelink }) => (
+          {portfolios.map(({ id, src,demolink,codelink }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg overflow-hidden object-fit">
               <img src={src} alt={`Project ${id}`} className="rounded-md duration-200 ease-in hover:scale-110 w-full h-48 object-cover" />
               <div className="flex items-center justify-center p-4">
