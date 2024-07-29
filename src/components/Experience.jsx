@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import html from '../assets/html.png';
 import CSS from '../assets/css.png';
 import javascript from '../assets/javascript.png';
@@ -7,8 +8,16 @@ import nextjs from '../assets/nextjs.png';
 import graphql from '../assets/graphql.png';
 import tailwind from '../assets/tailwind.png';
 import github from '../assets/github.png';
+import ScrollReveal from 'scrollreveal'; 
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
+
 
 export const Experience = () => {
+
+  useEffect(()=>{
+    ScrollReveal().reveal('.item', {origin: 'top',distance: 80+100,duration: 2000, delay:100,reset: true });
+},[]) 
+
   const techs = [
     {
       id: 1,
@@ -84,14 +93,16 @@ export const Experience = () => {
         gap-8 text-center py-8 px-12 sm:px-0"
         >
           {techs.map(({ id, src, title, style }) => (
+            <Slide duration={0+1000} delay={0+100} cascade={true}>
             <div
               key={id}
               className={`shadow-md hover:scale-110 duration-300 ease-in-out
-                    py-2 rounded-lg ${style}`}
+                    py-2 rounded-lg  ${style}`}
             >
               <img src={src} alt="" className="w-20 mx-auto" />
               <p className="mt-4">{title}</p>
             </div>
+            </Slide>
           ))}
         </div>
       </div>
