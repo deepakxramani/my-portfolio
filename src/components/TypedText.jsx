@@ -7,7 +7,7 @@ function TypedText() {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Web Developer', 'Video Editor', 'Graphic Designer'],
+      strings: ['Full Stack Developer', 'Video Editor', 'Web Designer'],
       typeSpeed: 80,
       backSpeed: 30,
       backDelay: 2000,
