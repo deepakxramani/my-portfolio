@@ -51,7 +51,7 @@ const Home = () => {
                 <p className='text-gray-500  py-4 text-center md:text-start max-w-md feature-info'>
                     I have a 1 year of experience building and
                     designing web applications using technologies
-                    like React, Tailwind and GraphQL.
+                    like React, Node.js, MySQL, MongoDB, Tailwind Css.
                 </p>
                 <div className='flex flex-row justify-between feature-btn'>
                 <div className='mr-4'>
