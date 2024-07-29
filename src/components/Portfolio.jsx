@@ -7,6 +7,7 @@ import reactSmooth from "../assets/reactSmooth.jpg"
 import reactWeather from "../assets/reactWeather.jpg"
 import calculateMe from "../assets/calculateMe.jpg"
 import MedBazzar from "../assets/medbazzar@1.25x.jpg"
+import { Zoom } from 'react-awesome-reveal'
 const Portfolio = () => {
 
   const portfolios = [
@@ -63,6 +64,7 @@ const Portfolio = () => {
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {portfolios.map(({ id, src,demolink,codelink }) => (
+          <Zoom duration={0+1000} delay={0+100} fraction={0} cascade={true}>
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg overflow-hidden object-fit">
               <img src={src} alt={`Project ${id}`} className="rounded-md duration-200 ease-in hover:scale-110 w-full h-48 object-cover" />
               <div className="flex items-center justify-center p-4">
@@ -75,6 +77,7 @@ const Portfolio = () => {
                 </button>
               </div>
             </div>
+            </Zoom>
           ))}
         </div>
       </div>

@@ -9,7 +9,7 @@ import graphql from '../assets/graphql.png';
 import tailwind from '../assets/tailwind.png';
 import github from '../assets/github.png';
 import ScrollReveal from 'scrollreveal'; 
-import { Fade, Slide, Zoom } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 
 
 export const Experience = () => {
@@ -93,7 +93,7 @@ export const Experience = () => {
         gap-8 text-center py-8 px-12 sm:px-0"
         >
           {techs.map(({ id, src, title, style }) => (
-            <Slide duration={0+1000} delay={0+100} cascade={true}>
+            <Zoom duration={0+1000} delay={0+100} cascade={true}>
             <div
               key={id}
               className={`shadow-md hover:scale-110 duration-300 ease-in-out
@@ -102,7 +102,7 @@ export const Experience = () => {
               <img src={src} alt="" className="w-20 mx-auto" />
               <p className="mt-4">{title}</p>
             </div>
-            </Slide>
+            </Zoom>
           ))}
         </div>
       </div>
