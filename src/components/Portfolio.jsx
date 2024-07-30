@@ -7,7 +7,8 @@ import reactSmooth from "../assets/reactSmooth.jpg"
 import reactWeather from "../assets/reactWeather.jpg"
 import calculateMe from "../assets/calculateMe.jpg"
 import MedBazzar from "../assets/medbazzar@1.25x.jpg"
-import { Zoom } from 'react-awesome-reveal'
+import { Fade, Slide, Zoom } from 'react-awesome-reveal'
+
 const Portfolio = () => {
 
   const portfolios = [
@@ -58,10 +59,12 @@ const Portfolio = () => {
   return (
     <div name="portfolio" className="bg-gradient-to-b from-black to-gray-800 w-full text-white pt-20">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-fit">
+      <Zoom duration={1000} delay={0+100} fraction={0} cascade={true}>
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">Portfolio</p>
           <p className="py-6">Check out some of my work right here</p>
         </div>
+        </Zoom>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {portfolios.map(({ id, src,demolink,codelink }) => (
           <Zoom duration={0+1000} delay={0+100} fraction={0} cascade={true}>
