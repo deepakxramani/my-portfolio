@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-scroll"
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsTwitterX, BsInstagram } from "react-icons/bs";
 
 
 export const Footer = () => {
@@ -30,38 +30,31 @@ export const Footer = () => {
   return (
     <footer
       name="contact"
-      className="w-full 
+      className="w-full h-fit
       bg-gradient-to-b from-black to-gray-800 p-4 text-white"
-      style={{height:'60vh'}}
+      
     >
         
-    <div className='mx-auto flex items-center justify-around flex-row text-center m-10'>
-      <div style={{width:'25%'}}>
-        <h2 className='text-4xl font-bold capitalize leading-10'>Deepak Ramani</h2>
-        <p className='my-2 mx-auto' style={{color:'#cacdd2'}}>"I'm not gonna run away, I never go back on my word! That's my nindo: my ninja way!"</p>
+    <div className='mx-auto flex items-center justify-around sm:flex-row flex-col text-center m-10'>
+      <div className='flex items-center justify-center flex-col'>
+        <h2 className='sm:text-4xl text-3xl font-bold capitalize leading-10'>Deepak Ramani</h2>
+        <p className='my-2 mx-4 sm:max-w-md sm:text-xl' style={{color:'#cacdd2'}}>"I'm not gonna run away, I never go back on my word! That's my nindo: my ninja way!"</p>
         </div>
-        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginTop:25}}>
-        <ul className="flex flex-col text-center my-5">
-        {links.map(({id,link})=>(
-        <li key={id} className="px-4 py-1 cursor-pointer capitalize font-medium text-xl
-             text-gray-500 hover:scale-105 duration-200 hover:text-cyan-500">
-          <Link to={link} smooth duration={500} >
-            {link}
-            </Link>
-        </li>
-
-      ))}
-
-      </ul>
-        </div>
-
-        <div>
-          <h2 style={{fontFamily:'Roboto',fontSize:30}}>Get in Touch</h2>
-          <div>
-            <BsLinkedin/>
+        
+        <div className='flex items-center justify-center flex-col mt-6'>
+          <h2 className='font-signature sm:text-5xl text-4xl'>Get in Touch</h2>
+          <div className='flex flex-row gap-4 mt-4'>
+            <a href='https://www.linkedin.com/in/deepakxramani/' target='_blank' className='hover:text-cyan-500 duration-200 ease-in-out cursor-pointer'><BsLinkedin size={30} /></a>
+            <a href='https://github.com/deepakxramani' target='_blank' className='hover:text-cyan-500 duration-200 ease-in-out cursor-pointer'><BsGithub size={30}/></a>
+            <a href='https://x.com/deepakxramani' target='_blank' className='hover:text-cyan-500 duration-200 ease-in-out cursor-pointer'><BsTwitterX size={30} /></a>
+            <a href='https://www.instagram.com/deepakxramani/' target='_blank' className='hover:text-cyan-500 duration-200 ease-in-out cursor-pointer'><BsInstagram size={30} /></a>
           </div>
       </div>
 
+    </div>
+
+    <div className='flex items-center justify-center'>
+      <p className='sm:mt-24 sm:text-xl text-sm'>Copyright &#169; 2024 <Link to={'home'} smooth duration={500}><span className='font-semibold hover:text-cyan-500 duration-200 ease-in-out cursor-pointer'>Deepak Ramani</span></Link></p>
     </div>
 
 
