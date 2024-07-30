@@ -32,9 +32,9 @@ const About = () => {
             <p className="text-xl mt-10 item1">
                 <div className="mb-2 "><h4 className="font-bold text-xl border-b-4
                 border-gray-500 inline">CURRENT:</h4></div>
-                <span>SDE Intern @Numeric Infosystem Pvt. Ltd.</span>
+                <span>Intern @Numeric Infosystem Pvt. Ltd.</span>
                 <br />
-                Role: Full Stack Web Developer
+                Role: Full Stack Developer
                 <br />
                 From: 2023 - 2024 (current)
                 
