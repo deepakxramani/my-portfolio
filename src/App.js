@@ -16,7 +16,7 @@ function App() {
         <Experience />
         <Contact />
         <Footer />
-        <SocialLinks />
+        {/* <SocialLinks /> */}
       </div>
     );
 }

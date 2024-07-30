@@ -33,7 +33,7 @@ const Home = () => {
         
         <div className='max-w-screen-lg mx-auto flex flex-col
         items-center justify-center min-h-full pt-20 px-4  md:flex-row' >
-            
+            <SocialLinks  />
             <div className='flex flex-col justify-center items-center md:items-start h-full '>
                 <h2 className='text-white text-3xl sm:text-4xl font-bold hi-text'>Hi There<span className="wave">👋</span>,</h2>
                 <h2 className='text-3xl sm:text-6xl font-bold md:pr-32
@@ -65,7 +65,7 @@ const Home = () => {
                     </Link>
                 </div>
                 <div>
-                    <a href='https://drive.google.com/file/d/1jAj8A9Zp6GiQEbVAS67wS7URY5RDuA7J/view?usp=drive_link' download={true} smooth duration={500} className='group text-white w-fit px-3 py-3 my-2
+                    <a href='https://drive.google.com/file/d/1UQXQna0N284sXbNUbq867gvjIqrfwQy-/view?usp=sharing' download={true} smooth duration={500} className='group text-white w-fit px-3 py-3 my-2
                     flex items-center rounded-md bg-gradient-to-r
                     from-cyan-500 to-blue-500 cursor-pointer' >
                         Download CV
