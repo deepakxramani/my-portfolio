@@ -1,27 +1,45 @@
 [   
-    {
-      "id": 1,
-      "src": "calculateMe"
-    },
-    {
-      "id": 2,
-      "src": "reactParallax"
-    },
-    {
-      "id": 3,
-      "src": "navbar"
-    },
-    {
-      "id": 4,
-      "src": "reactSmooth"
-    },
-    {
-      "id": 5,
-      "src": "installNode"
-    },
-    {
-      "id": 6,
-      "src": "reactWeather"
-    }
+  {
+    "id": 1,
+    "name": "MedBazzar (E-Commerce Website)",
+    "src": "/assets/MedBazzar.jpg",
+    "demolink": "https://medbazzar.netlify.app/",
+    "codelink": "https://github.com/deepakxramani?tab=repositories"
+  },
+  {
+    "id": 2,
+    "name": "Calculator App",
+    "src": "/assets/calculateMe.jpg",
+    "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
+  },
+  {
+    "id": 3,
+    "name": "Calculator App",
+    "src": "/assets/navbar.jpg",
+    "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
+  },
+  {
+    "id": 4,
+    "name": "Calculator App",
+    "src": "/assets/reactSmooth.jpg",
+    "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
+  },
+  {
+    "id": 5,
+    "name": "Calculator App",
+    "src": "/assets/installNode.jpg",
+    "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
+  },
+  {
+    "id": 6,
+    "name": "Calculator App",
+    "src": "/assets/reactWeather.jpg",
+    "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
+  }
   ]
   

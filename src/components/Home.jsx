@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import HeroImage from '../assets/HeroImage.jpg';
 import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
 import TypedText from './TypedText';
 import './waving-emoji.css'
@@ -87,7 +86,7 @@ const Home = () => {
             <div className='hover:drop-shadow-2xl all ease-in-out duration-300'>
                 
             
-                <img src={HeroImage} style={{width:300,}} alt="my profile"
+                <img src="/HeroImage.jpg" style={{width:300,}} alt="my profile"
                     className='rounded-2xl mx-auto w-2/3 md:w-full'/>
                     
                 

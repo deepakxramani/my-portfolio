@@ -1,15 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
-import html from '../assets/html.png';
-import CSS from '../assets/css.png';
-import javascript from '../assets/javascript.png';
-import reactImage from '../assets/react.png';
-import nextjs from '../assets/nextjs.png';
-import graphql from '../assets/graphql.png';
-import tailwind from '../assets/tailwind.png';
-import github from '../assets/github.png';
 import ScrollReveal from 'scrollreveal'; 
 import { Zoom } from "react-awesome-reveal";
+import technologies from "../components/technologies.json"
 
 
 export const Experience = () => {
@@ -18,56 +11,56 @@ export const Experience = () => {
     ScrollReveal().reveal('.item', {origin: 'top',distance: 80+100,duration: 2000, delay:100,reset: true });
 },[]) 
 
-  const techs = [
-    {
-      id: 1,
-      src: `${html}`,
-      title: 'HTML',
-      style: 'shadow-orange-500',
-    },
-    {
-      id: 2,
-      src: `${CSS}`,
-      title: 'CSS',
-      style: 'shadow-blue-500',
-    },
-    {
-      id: 3,
-      src: `${javascript}`,
-      title: 'JavaScript',
-      style: 'shadow-yellow-500',
-    },
-    {
-      id: 4,
-      src: `${reactImage}`,
-      title: 'React',
-      style: 'shadow-blue-500',
-    },
-    {
-      id: 5,
-      src: `${tailwind}`,
-      title: 'Tailwind',
-      style: 'shadow-sky-500',
-    },
-    {
-      id: 6,
-      src: `${nextjs}`,
-      title: 'Next JS',
-      style: 'shadow-gray-500',
-    },
-    {
-      id: 7,
-      src: `${graphql}`,
-      title: 'GraphQL',
-      style: 'shadow-pink-500',
-    },
-    {
-      id: 8,
-      src: `${github}`,
-      title: 'GitHub',
-      style: 'shadow-gray-500',
-    },
-  ];
+  // const techs = [
+  //   {
+  //     id: 1,
+  //     src: `${html}`,
+  //     title: 'HTML',
+  //     style: 'shadow-orange-500',
+  //   },
+  //   {
+  //     id: 2,
+  //     src: `${CSS}`,
+  //     title: 'CSS',
+  //     style: 'shadow-blue-500',
+  //   },
+  //   {
+  //     id: 3,
+  //     src: `${javascript}`,
+  //     title: 'JavaScript',
+  //     style: 'shadow-yellow-500',
+  //   },
+  //   {
+  //     id: 4,
+  //     src: `${reactImage}`,
+  //     title: 'React',
+  //     style: 'shadow-blue-500',
+  //   },
+  //   {
+  //     id: 5,
+  //     src: `${tailwind}`,
+  //     title: 'Tailwind',
+  //     style: 'shadow-sky-500',
+  //   },
+  //   {
+  //     id: 6,
+  //     src: `${nextjs}`,
+  //     title: 'Next JS',
+  //     style: 'shadow-gray-500',
+  //   },
+  //   {
+  //     id: 7,
+  //     src: `${graphql}`,
+  //     title: 'GraphQL',
+  //     style: 'shadow-pink-500',
+  //   },
+  //   {
+  //     id: 8,
+  //     src: `${github}`,
+  //     title: 'GitHub',
+  //     style: 'shadow-gray-500',
+  //   },
+  // ];
 
   return (
     <div
@@ -93,7 +86,7 @@ export const Experience = () => {
           className="w-full grid grid-cols-2 sm:grid-cols-3
         gap-8 text-center py-8 px-12 sm:px-0"
         >
-          {techs.map(({ id, src, title, style }) => (
+          {technologies.map(({ id, src, title, style }) => (
             <Zoom duration={0+1000} delay={0+100} cascade={true}>
             <div
               key={id}
