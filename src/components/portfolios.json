@@ -8,17 +8,17 @@
   },
   {
     "id": 2,
-    "name": "Calculator App",
-    "src": "/assets/calculateMe.jpg",
-    "demolink": "https://calculateme-deepakxramani.netlify.app/",
-    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
-  },
-  {
-    "id": 3,
     "name": "Promptnation",
     "src": "/assets/promptnation.jpg",
     "demolink": "https://promptnation-by-deepakramani.vercel.app/",
     "codelink": "https://github.com/deepakxramani/promptnation"
+  },
+  {
+    "id": 3,
+    "name": "Calculator App",
+    "src": "/assets/calculateMe.jpg",
+    "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
   },
   {
     "id": 4,
