@@ -15,10 +15,10 @@
   },
   {
     "id": 3,
-    "name": "Calculator App",
-    "src": "/assets/navbar.jpg",
-    "demolink": "https://calculateme-deepakxramani.netlify.app/",
-    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
+    "name": "Promptnation",
+    "src": "/assets/promptnation.jpg",
+    "demolink": "https://promptnation-by-deepakramani.vercel.app/",
+    "codelink": "https://github.com/deepakxramani/promptnation"
   },
   {
     "id": 4,
