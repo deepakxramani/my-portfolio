@@ -14,7 +14,7 @@ const SocialLinks = () => {
                     LinkedIn <FaLinkedin size={30} />
                 </>
             ),
-            href: 'https://linkedin.com/in/deepakramani79',
+            href: 'https://linkedin.com/in/deepakxramani',
             style: 'rounded-tr-md'
         },
         {
@@ -42,7 +42,7 @@ const SocialLinks = () => {
                     Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: 'https://drive.google.com/file/d/14LCAFWtgrf_3YYXpqS_GT87YVG4mgBqk/view?usp=drive_link',
+            href: 'https://drive.google.com/file/d/1Wt5vH9_riaWtD-FmZuFtN1KPrwHHP_7G/view?usp=drive_link',
             download: true,
         }
     ]
