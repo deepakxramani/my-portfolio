@@ -11,14 +11,10 @@
   }
 }
 
-.hideLinks li {
-  
-  /* Ensure links stay hidden on screens smaller than 1024px */
-  @media (max-width: 1024px) {
+.hideLinks {
+    @media (max-width: 1024px) {
     display: none !important; /* Hide links on mobile */
   }
-  
-
 }
 
 .iframe-video {
