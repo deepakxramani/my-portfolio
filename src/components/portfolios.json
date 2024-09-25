@@ -4,6 +4,7 @@
     "name": "MedBazzar (E-Commerce Website)",
     "src": "/assets/medbazzar.jpg",
     "demolink": "https://medbazzar.netlify.app/",
+    "videolink": "https://www.youtube-nocookie.com/embed/NUfMm5MDu78?si=V09vwBuCBI_eRMmh",
     "codelink": "https://github.com/deepakxramani?tab=repositories"
   },
   {
@@ -11,6 +12,7 @@
     "name": "Promptnation",
     "src": "/assets/promptnation.jpg",
     "demolink": "https://promptnation-by-deepakramani.vercel.app/",
+    "videolink": "",
     "codelink": "https://github.com/deepakxramani/promptnation"
   },
   {
@@ -18,6 +20,7 @@
     "name": "Calculator App",
     "src": "/assets/calculateMe.jpg",
     "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "videolink": "",
     "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
   },
   {
@@ -25,6 +28,7 @@
     "name": "Calculator App",
     "src": "/assets/reactSmooth.jpg",
     "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "videolink": "",
     "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
   },
   {
@@ -32,6 +36,7 @@
     "name": "Calculator App",
     "src": "/assets/installNode.jpg",
     "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "videolink": "",
     "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
   },
   {
@@ -39,6 +44,7 @@
     "name": "Calculator App",
     "src": "/assets/reactWeather.jpg",
     "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "videolink": "",
     "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
   }
   ]
