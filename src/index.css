@@ -10,9 +10,9 @@
   }
 }
 
-.hideLinks {
-    @media (max-width: 1024px) {
-    display: none; /* Hide links on mobile */
+@media (max-width: 1024px) {
+  .hideLinks {
+    display: none !important;
   }
 }
 
