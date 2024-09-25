@@ -24,11 +24,11 @@ const Portfolio = () => {
         <div style={{display:'flex', alignItems:'center',justifyContent:'center', flexDirection:'column', gap:15}}>
                
                
-               {videoLink?<iframe className='iframe-video' style={{borderRadius:15}}  src={videoLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+               {videoLink?<iframe className='demoVideo' style={{borderRadius:15}}  src={videoLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
                : <img alt='not-found' src='assets/notfoundimg.gif' style={{width:'70%'}}/>}
 
                <div>
-                <p style={{fontWeight:500}}>Live Demo: <a className='demo-link' href={demoLink} target='_blank' rel="noreferrer" style={{color:'red', fontWeight:600, textDecoration:'aquamarine'}}>Click Here</a></p>
+                <p style={{fontWeight:500}}>Live Demo: <a className='demoLink' href={demoLink} target='_blank' rel="noreferrer" style={{color:'red', fontWeight:600, textDecoration:'aquamarine'}}>Click Here</a></p>
                </div>
 
                </div>
