@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import { Zoom } from 'react-awesome-reveal'
 import portfolios from "../components/portfolios.json"
 import { Dialog } from 'primereact/dialog';
-        
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+
 
 const Portfolio = () => {
 
@@ -10,6 +14,9 @@ const Portfolio = () => {
   const [visible, setVisible] = useState(false);
   const [demoLink, setDemoLink] = useState("");
   const [videoLink, setVideoLink] = useState("");
+
+  const theme = useTheme();
+  const matchesSM = useMediaQuery(theme.breakpoints.up('sm'));
 
   const loadMore = () => {
     setElements(elements + elements)
@@ -19,16 +26,16 @@ const Portfolio = () => {
   const handleDialogue = () => {
     
     return(
-      <Dialog modal={true} header="Project Demo:" headerStyle={{fontWeight:600}} visible={visible} style={{ width: '50vw', background: '#fff', padding:30, borderRadius:10 }} onHide={() => {if (!visible) return; setVisible(false); }} breakpoints={{ '960px': '90vw', '641px': '100vw' }}>
+      <Dialog  draggable={false} modal={true} header="Project Demo:" headerStyle={{fontWeight:500, fontFamily: 'Raleway'}} visible={visible} style={{fontFamily: 'Raleway' ,width: '50vw', background: '#fff', padding:5, borderRadius:10 }} onHide={() => {if (!visible) return; setVisible(false); }} breakpoints={{ '960px': '90vw', '641px': '100vw' }}>
 
         <div style={{display:'flex', alignItems:'center',justifyContent:'center', flexDirection:'column', gap:15}}>
                
                
-               {videoLink?<iframe className='demoVideo' style={{borderRadius:15}}  src={videoLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-               : <img alt='not-found' src='assets/notfoundimg.gif' style={{width:'70%'}}/>}
+               {videoLink?<iframe className='demoVideo' style={{width:matchesSM?'100%':330, height:matchesSM?315:250,borderRadius:15}}  src={videoLink} title="YouTube video player" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+               : <img alt='not-found' src='assets/notfoundimg.gif' style={{width:matchesSM?'55%':320}}/>}
 
                <div>
-                <p style={{fontWeight:500}}>Live Demo: <a className='demoLink' href={demoLink} target='_blank' rel="noreferrer" style={{color:'red', fontWeight:600, textDecoration:'aquamarine'}}>Click Here</a></p>
+                <p style={{fontWeight:600}}>Live Demo: <a className='demoLink' href={demoLink} target='_blank' rel="noreferrer" style={{color:'red', fontWeight:600, textDecoration:'aquamarine'}}>Click Here</a></p>
                </div>
 
                </div>

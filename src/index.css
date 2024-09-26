@@ -10,9 +10,40 @@
   }
 }
 
+body {
+  font-family: 'Raleway', sans-serif !important;
+}
+
 .hideLinks {
     @media (max-width: 1024px) {
     display: none; /* Hide links on mobile */
+  }
+}
+
+.demoLink {
+  animation-name: example !important;
+  animation-duration: 4s !important;
+  animation-fill-mode: forwards !important;
+  animation-iteration-count: infinite; /* Optional: for looping the animation */
+}
+
+@keyframes example {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    color: red;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    color: red;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
