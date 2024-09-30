@@ -32,7 +32,7 @@ const Portfolio = () => {
                
                
                {videoLink?<iframe className='demoVideo' style={{width:matchesSM?'100%':330, height:matchesSM?315:250,borderRadius:15}}  src={videoLink} title="YouTube video player" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-               : <img alt='not-found' src='assets/notfoundimg.gif' style={{width:matchesSM?'55%':320}}/>}
+               : <img alt='not-found' src='assets/notfoundimg.gif' style={{width:matchesSM?'55%':310}}/>}
 
                <div>
                 <p style={{fontWeight:600}}>Live Demo: <a className='demoLink' href={demoLink} target='_blank' rel="noreferrer" style={{color:'red', fontWeight:600, textDecoration:'aquamarine'}}>Click Here</a></p>

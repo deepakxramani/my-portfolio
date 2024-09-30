@@ -64,7 +64,7 @@ const Home = () => {
                     </Link>
                 </div>
                 <div>
-                    <a href='https://drive.google.com/file/d/1Wt5vH9_riaWtD-FmZuFtN1KPrwHHP_7G/view?usp=drive_link' download={true} smooth duration={500} className='group text-white w-fit px-3 py-3 my-2
+                    <a href='https://drive.google.com/file/d/18d8oc95Jbl80fTK3v1mUK0Zk6e-hj8G0/view?usp=sharing' download={true} smooth duration={500} className='group text-white w-fit px-3 py-3 my-2
                     flex items-center rounded-md bg-gradient-to-r
                     from-cyan-500 to-blue-500 cursor-pointer' target="_blank" rel='noreferrer'>
                         Download CV
