@@ -17,6 +17,14 @@
   },
   {
     "id": 3,
+    "name": "Auth SignUp/Login App",
+    "src": "/assets/authMernApp.jpg",
+    "demolink": "https://auth-mern-app-1-ui.vercel.app/login",
+    "videolink": "",
+    "codelink": "https://github.com/deepakxramani/auth_mern_app_1"
+  },
+  {
+    "id": 4,
     "name": "Calculator App",
     "src": "/assets/calculateMe.jpg",
     "demolink": "https://calculateme-deepakxramani.netlify.app/",
@@ -24,20 +32,12 @@
     "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
   },
   {
-    "id": 4,
-    "name": "Calculator App",
-    "src": "/assets/reactSmooth.jpg",
-    "demolink": "https://calculateme-deepakxramani.netlify.app/",
-    "videolink": "",
-    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
-  },
-  {
     "id": 5,
-    "name": "Calculator App",
-    "src": "/assets/installNode.jpg",
-    "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "name": "CloudlyFy Weather Forecast App",
+    "src": "/assets/cloudlyWeather.jpg",
+    "demolink": "https://cloudlyfy.netlify.app/",
     "videolink": "",
-    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/03%20weather%20app"
   },
   {
     "id": 6,
