@@ -49,7 +49,11 @@ export const Experience = () => {
             <p className="py-6">These are the technologies I've worked with</p>
           </div>
         </Zoom>
-        <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-6 sm:px-0">
+        <div
+          className="w-full grid grid-cols-2 sm:grid-cols-3
+        gap-8 text-center py-8 px-12 sm:px-0"
+        >
+          {" "}
           {slicedTechs.map(({ id, src, title, style }) => (
             <Zoom duration={0 + 1000} delay={0 + 100} cascade={true}>
               <div
