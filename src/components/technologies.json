@@ -33,37 +33,37 @@
       "id": 5,
       "src": "assets/node.png",
       "title": "NodeJS",
-      "style": "shadow-blue-500 h-full"
+      "style": "shadow-green-500 h-full"
     },
     {
       "id": 6,
       "src": "assets/mongo.png",
       "title": "MongoDB",
-      "style": "shadow-blue-500 h-full"
+      "style": "shadow-green-500 h-full"
     },
     {
       "id": 7,
       "src": "assets/mysql3.png",
       "title": "MySQL",
-      "style": "shadow-blue-500 height-500 h-full" 
+      "style": "shadow-sky-500 h-full" 
     },
     {
       "id": 8,
       "src": "assets/redux.png",
       "title": "Redux",
-      "style": "shadow-blue-500 height-500 h-full" 
+      "style": "shadow-purple-500  h-full" 
     },
     {
       "id": 9,
       "src": "assets/npm.png",
       "title": "NPM",
-      "style": "shadow-blue-500 height-500 h-full" 
+      "style": "shadow-red-500 h-full" 
     },
     {
       "id": 10,
       "src": "assets/postman1.webp",
       "title": "Postman",
-      "style": "shadow-blue-500 height-500 h-full" 
+      "style": "shadow-orange-500 h-full" 
     },
     {
       "id": 5,
@@ -75,7 +75,7 @@
       "id": 8,
       "src": "assets/git.png",
       "title": "Git",
-      "style": "shadow-gray-500 h-full"
+      "style": "shadow-orange-500 h-full"
     },
     {
       "id": 8,
@@ -87,6 +87,6 @@
       "id": 9,
       "src": "assets/bitbucket2.png",
       "title": "BitBucket",
-      "style": "shadow-gray-500 rounded-[15px] h-full"
+      "style": "shadow-blue-500 h-full"
     }
   ]
