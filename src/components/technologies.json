@@ -3,48 +3,90 @@
       "id": 1,
       "src": "assets/html.png",
       "title": "HTML",
-      "style": "shadow-orange-500"
+      "style": "shadow-orange-500 h-full"
     },
     {
       "id": 2,
       "src": "assets/css.png",
       "title": "CSS",
-      "style": "shadow-blue-500"
+      "style": "shadow-blue-500 h-full"
     },
     {
       "id": 3,
       "src": "assets/javascript.png",
       "title": "JavaScript",
-      "style": "shadow-yellow-500"
+      "style": "shadow-yellow-500 h-full"
     },
     {
       "id": 4,
       "src": "assets/react.png",
       "title": "React",
-      "style": "shadow-blue-500"
-    },
-    {
-      "id": 5,
-      "src": "assets/tailwind.png",
-      "title": "Tailwind",
-      "style": "shadow-sky-500"
+      "style": "shadow-blue-500 h-full"
     },
     {
       "id": 6,
       "src": "assets/nextjs.png",
       "title": "Next JS",
-      "style": "shadow-gray-500"
+      "style": "shadow-gray-500 h-full"
+    },
+    {
+      "id": 5,
+      "src": "assets/node.png",
+      "title": "NodeJS",
+      "style": "shadow-blue-500 h-full"
+    },
+    {
+      "id": 6,
+      "src": "assets/mongo.png",
+      "title": "MongoDB",
+      "style": "shadow-blue-500 h-full"
     },
     {
       "id": 7,
-      "src": "assets/graphql.png",
-      "title": "GraphQL",
-      "style": "shadow-pink-500"
+      "src": "assets/mysql3.png",
+      "title": "MySQL",
+      "style": "shadow-blue-500 height-500 h-full" 
+    },
+    {
+      "id": 8,
+      "src": "assets/redux.png",
+      "title": "Redux",
+      "style": "shadow-blue-500 height-500 h-full" 
+    },
+    {
+      "id": 9,
+      "src": "assets/npm.png",
+      "title": "NPM",
+      "style": "shadow-blue-500 height-500 h-full" 
+    },
+    {
+      "id": 10,
+      "src": "assets/postman1.webp",
+      "title": "Postman",
+      "style": "shadow-blue-500 height-500 h-full" 
+    },
+    {
+      "id": 5,
+      "src": "assets/tailwind.png",
+      "title": "Tailwind",
+      "style": "shadow-sky-500 h-full"
+    },
+     {
+      "id": 8,
+      "src": "assets/git.png",
+      "title": "Git",
+      "style": "shadow-gray-500 h-full"
     },
     {
       "id": 8,
       "src": "assets/github.png",
       "title": "GitHub",
-      "style": "shadow-gray-500"
+      "style": "shadow-gray-500 h-full"
+    },
+    {
+      "id": 9,
+      "src": "assets/bitbucket2.png",
+      "title": "BitBucket",
+      "style": "shadow-gray-500 rounded-[15px] h-full"
     }
   ]
