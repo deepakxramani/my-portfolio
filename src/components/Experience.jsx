@@ -28,7 +28,7 @@ export const Experience = () => {
     }, 300);
   };
   const slicedTechs = technologies.slice(0, elements);
-
+// console.log("slicedTechs", slicedTechs)
   return (
     <div
       name="experience"
