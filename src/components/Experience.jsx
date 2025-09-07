@@ -59,7 +59,7 @@ export const Experience = () => {
               <div
                 key={id}
                 className={`shadow-md hover:scale-110 duration-300 ease-in-out
-                    py-2 rounded-lg flex flex-col justify-between  ${style}`}
+                    py-2 rounded-lg flex flex-col justify-between h-full ${style}`}
               >
                 <img src={src} alt="" className="w-20 mx-auto" />
                 <p className="mt-4">{title}</p>
