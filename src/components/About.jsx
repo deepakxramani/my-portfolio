@@ -193,11 +193,11 @@ const About = () => {
                     {/* Journey Summary */}
                     <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30 text-center hover:transform hover:scale-105 transition-all duration-300">
-                            <div className="text-3xl font-bold text-cyan-400">2+</div>
+                            <div className="text-3xl font-bold text-cyan-400">1+</div>
                             <div className="text-gray-300 mt-2">Years Experience</div>
                         </div>
                         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-500/30 text-center hover:transform hover:scale-105 transition-all duration-300">
-                            <div className="text-3xl font-bold text-green-400">3</div>
+                            <div className="text-3xl font-bold text-green-400">2</div>
                             <div className="text-gray-300 mt-2">Companies Worked</div>
                         </div>
                         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30 text-center hover:transform hover:scale-105 transition-all duration-300">
