@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Zoom, Fade } from "react-awesome-reveal";
-import portfolios from "../components/portfolios.json";
+import portfolios from "../utils/data/portfolios.json";
 import { Dialog } from "primereact/dialog";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";

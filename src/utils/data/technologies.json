@@ -103,5 +103,12 @@
     "title": "BitBucket",
     "style": "shadow-blue-500",
     "category": "tools"
+  },
+  {
+    "id": 16,
+    "src": "https://img.icons8.com/fluency/96/google-authenticator.png",
+    "title": "Google Oauth",
+    "style": "shadow-blue-500",
+    "category": "backend"
   }
 ]

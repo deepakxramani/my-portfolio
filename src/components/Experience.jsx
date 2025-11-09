@@ -1,35 +1,13 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
+import { useState } from "react";
 import { Zoom, Fade } from "react-awesome-reveal";
-import technologies from "../components/technologies.json";
+import technologies from "../utils/data/technologies.json";
 import { FaArrowRight, FaSpinner, FaCode, FaLayerGroup, FaTools } from "react-icons/fa";
-import "./loader.css";
 
-export const Experience = () => {
+const Experience = () => {
   const [elements, setElements] = useState(10);
   const [loading, setLoading] = useState(false);
   const [activeCategory, setActiveCategory] = useState("all");
 
-  useEffect(() => {
-    ScrollReveal().reveal(".tech-item", {
-      origin: "bottom",
-      distance: "50px",
-      duration: 1500,
-      delay: 100,
-      reset: true,
-    });
-    
-    ScrollReveal().reveal(".section-header", {
-      origin: "top",
-      distance: "80px",
-      duration: 1800,
-      delay: 200,
-      reset: true,
-    });
-  }, []);
-
-  // Simple filtering based on category
   const filteredTechs = activeCategory === "all" 
     ? technologies 
     : technologies.filter(tech => tech.category === activeCategory);
@@ -51,7 +29,6 @@ export const Experience = () => {
     setElements(10);
   };
 
-  // Category configuration
   const categories = [
     { 
       id: "all", 
@@ -92,8 +69,8 @@ export const Experience = () => {
 
       <div className="relative max-w-7xl mx-auto p-4 flex flex-col justify-center w-full h-full pt-24">
         {/* Header */}
-        <Fade direction="down" duration={1500} triggerOnce>
-          <div className="text-center mb-12 section-header">
+        <Fade direction="down" duration={1500}>
+          <div className="text-center mb-12">
             <h2 className="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
               Tech Stack
             </h2>
@@ -104,7 +81,7 @@ export const Experience = () => {
         </Fade>
 
         {/* Category Filters */}
-        <Fade direction="up" duration={1200} delay={300} triggerOnce>
+        <Fade duration={1200} delay={300}>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
               <button
@@ -137,8 +114,7 @@ export const Experience = () => {
               key={tech.id}
               duration={800}
               delay={index * 50}
-              triggerOnce
-              className="tech-item"
+              style={{ cursor: 'pointer' }}
             >
               <div className="group relative bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/30 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 flex flex-col items-center justify-center h-40">
                 {/* Background Glow */}
@@ -175,7 +151,7 @@ export const Experience = () => {
 
         {/* Load More Button */}
         {hasMore && (
-          <Fade direction="up" duration={1000} triggerOnce>
+          <Fade direction="up" duration={1000}>
             <div className="flex flex-col items-center gap-6">
               {loading ? (
                 <div className="flex items-center gap-3 text-cyan-400">
@@ -212,7 +188,7 @@ export const Experience = () => {
         )}
 
         {/* Stats */}
-        <Fade direction="up" duration={1200} delay={400} triggerOnce>
+        <Fade direction="up" duration={1200} delay={400}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/30 text-center hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-3xl font-bold text-cyan-400">{technologies.length}</div>
@@ -241,4 +217,6 @@ export const Experience = () => {
       </div>
     </div>
   );
-};
+}
+
+export default Experience;
