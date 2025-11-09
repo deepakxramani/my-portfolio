@@ -81,16 +81,13 @@ const Home = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col items-center justify-center min-h-screen pt-16 px-4 md:flex-row relative z-10">
-        {/* Social Links */}
-        <div className="absolute left-6 top-1/2 transform -translate-y-1/2 hidden lg:block">
-          <SocialLinks />
-        </div>
+      {/* Desktop Social Links - Fixed on Left Side (Hidden on Mobile) */}
+      <div className="fixed left-0 top-1/2 transform -translate-y-1/2 hidden lg:flex z-50 bg-red-500 p-4">
+        <div className="text-white font-bold mr-4">TEST VISIBLE</div>
+        <SocialLinks />
+      </div>
 
-        {/* Mobile Social Links */}
-        <div className="block lg:hidden mb-8">
-          <SocialLinks />
-        </div>
+      <div className="max-w-7xl mx-auto flex flex-col items-center justify-center min-h-screen pt-24 pb-8 px-4 md:flex-row relative z-10 gap-8">
 
         {/* Text Content */}
         <div className="flex flex-col justify-center items-center md:items-start h-full text-center md:text-left mb-12 md:mb-0 md:flex-1">
@@ -183,7 +180,7 @@ const Home = () => {
         </div>
 
         {/* Hero Image */}
-        <div className="hero-image cursor-pointer md:flex-1 flex justify-center items-center">
+        <div className="hero-image cursor-pointer md:flex-1 flex justify-center items-center w-full">
           <Tilt
             glareEnable={true}
             glareMaxOpacity={0.3}
@@ -194,7 +191,7 @@ const Home = () => {
             tiltMaxAngleY={10}
             scale={1.05}
             transitionSpeed={2000}
-            className="relative"
+            className="relative w-full max-w-md"
           >
             <div className="relative group">
               {/* Background Glow */}
@@ -205,7 +202,7 @@ const Home = () => {
                 <img
                   src="/HeroImage2.jpg"
                   alt="Deepak Ramani"
-                  className="rounded-2xl w-64 sm:w-80 lg:w-96 transform group-hover:scale-105 transition-transform duration-500"
+                  className="rounded-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
