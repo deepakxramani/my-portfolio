@@ -5,7 +5,7 @@ import "./waving-emoji.css";
 import { Link } from "react-scroll";
 import Tilt from "react-parallax-tilt";
 import { FaCloudDownloadAlt, FaStar, FaRocket } from "react-icons/fa";
-import { SiReact, SiNodedotjs, SiMongodb, SiTailwindcss } from "react-icons/si";
+import { SiReact, SiNodedotjs, SiMongodb, SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import ScrollReveal from "scrollreveal";
 import SocialLinks from "./SocialLinks";
 
@@ -62,7 +62,8 @@ const Home = () => {
   }, []);
 
   const techIcons = [
-    { icon: <SiReact className="text-cyan-400" />, name: "React" },
+    { icon: <SiReact className="text-cyan-400" />, name: "React.js" },
+    { icon: <SiNextdotjs className="text-white-400" />, name: "Next.js" },
     { icon: <SiNodedotjs className="text-green-500" />, name: "Node.js" },
     { icon: <SiMongodb className="text-green-600" />, name: "MongoDB" },
     { icon: <SiTailwindcss className="text-blue-400" />, name: "Tailwind" },
@@ -131,7 +132,7 @@ const Home = () => {
           <div className="tech-stack mb-8">
             <div className="flex items-center gap-6">
               {techIcons.map((tech, index) => (
-                <div key={index} className="flex flex-col items-center group">
+                <div key={index} className="flex flex-col items-center group cursor-pointer">
                   <div className="text-3xl p-3 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 group-hover:border-cyan-500/50 group-hover:transform group-hover:scale-110 transition-all duration-300">
                     {tech.icon}
                   </div>
@@ -149,7 +150,7 @@ const Home = () => {
               to="portfolio"
               smooth
               duration={500}
-              className="group relative overflow-hidden bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-xl flex items-center justify-center transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1"
+              className="group relative cursor-pointer overflow-hidden bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-xl flex items-center justify-center transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1"
             >
               <span className="flex items-center">
                 Explore My Work
@@ -182,7 +183,7 @@ const Home = () => {
         </div>
 
         {/* Hero Image */}
-        <div className="hero-image md:flex-1 flex justify-center items-center">
+        <div className="hero-image cursor-pointer md:flex-1 flex justify-center items-center">
           <Tilt
             glareEnable={true}
             glareMaxOpacity={0.3}

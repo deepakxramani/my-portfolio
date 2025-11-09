@@ -22,16 +22,16 @@ const About = () => {
             type: "professional",
             status: "current"
         },
-        {
-            year: "2023",
-            title: "Web Developer Intern",
-            company: "Bharat Intern",
-            role: "Full Stack Developer",
-            duration: "July 2023 - August 2023 (1 Month)",
-            icon: <FaBriefcase className="text-green-400" />,
-            type: "professional",
-            status: "completed"
-        },
+        // {
+        //     year: "2023",
+        //     title: "Web Developer Intern",
+        //     company: "Bharat Intern",
+        //     role: "Full Stack Developer",
+        //     duration: "July 2023 - August 2023 (1 Month)",
+        //     icon: <FaBriefcase className="text-green-400" />,
+        //     type: "professional",
+        //     status: "completed"
+        // },
         {
             year: "2023-2024",
             title: "Full Stack Developer Intern",
@@ -46,7 +46,6 @@ const About = () => {
             year: "2021-2024",
             title: "Bachelor's in Computer Application",
             company: "Jiwaji University Gwalior",
-            role: "CGPA: 7.8",
             duration: "2021 - 2024",
             icon: <FaGraduationCap className="text-purple-400" />,
             type: "education",
