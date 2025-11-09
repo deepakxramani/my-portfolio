@@ -203,7 +203,7 @@ const Home = () => {
               {/* Image Container */}
               <div className="relative bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-2 group-hover:border-cyan-500/30 transition-all duration-500">
                 <img
-                  src="/HeroImage.jpg"
+                  src="/HeroImage2.jpg"
                   alt="Deepak Ramani"
                   className="rounded-2xl w-64 sm:w-80 lg:w-96 transform group-hover:scale-105 transition-transform duration-500"
                 />
