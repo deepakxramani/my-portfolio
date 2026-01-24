@@ -1,16 +1,23 @@
 import { useState } from "react";
 import { Zoom, Fade } from "react-awesome-reveal";
 import technologies from "../utils/data/technologies.json";
-import { FaArrowRight, FaSpinner, FaCode, FaLayerGroup, FaTools } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaSpinner,
+  FaCode,
+  FaLayerGroup,
+  FaTools,
+} from "react-icons/fa";
 
 const Experience = () => {
   const [elements, setElements] = useState(10);
   const [loading, setLoading] = useState(false);
   const [activeCategory, setActiveCategory] = useState("all");
 
-  const filteredTechs = activeCategory === "all" 
-    ? technologies 
-    : technologies.filter(tech => tech.category === activeCategory);
+  const filteredTechs =
+    activeCategory === "all"
+      ? technologies
+      : technologies.filter((tech) => tech.category === activeCategory);
 
   const slicedTechs = filteredTechs.slice(0, elements);
   const hasMore = elements < filteredTechs.length;
@@ -19,7 +26,7 @@ const Experience = () => {
     setLoading(true);
     setTimeout(() => {
       const increment = window.innerWidth < 768 ? 6 : 10;
-      setElements(prev => prev + increment);
+      setElements((prev) => prev + increment);
       setLoading(false);
     }, 800);
   };
@@ -30,36 +37,36 @@ const Experience = () => {
   };
 
   const categories = [
-    { 
-      id: "all", 
-      name: "All Technologies", 
+    {
+      id: "all",
+      name: "All Technologies",
       icon: <FaCode className="text-cyan-400" />,
-      count: technologies.length
+      count: technologies.length,
     },
-    { 
-      id: "frontend", 
-      name: "Frontend", 
+    {
+      id: "frontend",
+      name: "Frontend",
       icon: <FaCode className="text-blue-400" />,
-      count: technologies.filter(t => t.category === 'frontend').length
+      count: technologies.filter((t) => t.category === "frontend").length,
     },
-    { 
-      id: "backend", 
-      name: "Backend", 
+    {
+      id: "backend",
+      name: "Backend",
       icon: <FaLayerGroup className="text-green-400" />,
-      count: technologies.filter(t => t.category === 'backend').length
+      count: technologies.filter((t) => t.category === "backend").length,
     },
-    { 
-      id: "tools", 
-      name: "Tools", 
+    {
+      id: "tools",
+      name: "Tools",
       icon: <FaTools className="text-purple-400" />,
-      count: technologies.filter(t => t.category === 'tools').length
-    }
+      count: technologies.filter((t) => t.category === "tools").length,
+    },
   ];
 
   return (
     <div
       name="experience"
-      className="w-full min-h-screen relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800"
+      className="w-full min-h-screen relative overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -89,17 +96,19 @@ const Experience = () => {
                 onClick={() => handleCategoryChange(category.id)}
                 className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   activeCategory === category.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-2xl shadow-cyan-500/25 transform -translate-y-1'
-                    : 'bg-gray-800/50 backdrop-blur-sm text-gray-300 border border-gray-700 hover:border-cyan-500/50 hover:text-white'
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-2xl shadow-cyan-500/25 transform -translate-y-1"
+                    : "bg-gray-800/50 backdrop-blur-sm text-gray-300 border border-gray-700 hover:border-cyan-500/50 hover:text-white"
                 }`}
               >
                 {category.icon}
                 <span>{category.name}</span>
-                <span className={`px-2 py-1 text-xs rounded-full ${
-                  activeCategory === category.id 
-                    ? 'bg-white/20 text-white' 
-                    : 'bg-gray-700 text-gray-300'
-                }`}>
+                <span
+                  className={`px-2 py-1 text-xs rounded-full ${
+                    activeCategory === category.id
+                      ? "bg-white/20 text-white"
+                      : "bg-gray-700 text-gray-300"
+                  }`}
+                >
                   {category.count}
                 </span>
               </button>
@@ -114,12 +123,12 @@ const Experience = () => {
               key={tech.id}
               duration={800}
               delay={index * 50}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
             >
               <div className="group relative bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/30 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 flex flex-col items-center justify-center h-40">
                 {/* Background Glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 {/* Technology Icon */}
                 <div className="relative z-10 transform group-hover:scale-110 transition-transform duration-500 mb-4">
                   <img
@@ -136,11 +145,15 @@ const Experience = () => {
 
                 {/* Category Badge */}
                 <div className="relative z-10 mt-2">
-                  <span className={`px-2 py-1 text-xs rounded-full capitalize ${
-                    tech.category === 'frontend' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' :
-                    tech.category === 'backend' ? 'bg-green-500/20 text-green-300 border border-green-500/30' :
-                    'bg-purple-500/20 text-purple-300 border border-purple-500/30'
-                  }`}>
+                  <span
+                    className={`px-2 py-1 text-xs rounded-full capitalize ${
+                      tech.category === "frontend"
+                        ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
+                        : tech.category === "backend"
+                          ? "bg-green-500/20 text-green-300 border border-green-500/30"
+                          : "bg-purple-500/20 text-purple-300 border border-purple-500/30"
+                    }`}
+                  >
                     {tech.category}
                   </span>
                 </div>
@@ -167,9 +180,10 @@ const Experience = () => {
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </button>
               )}
-              
+
               <div className="text-gray-400 text-sm">
-                Showing {slicedTechs.length} of {filteredTechs.length} technologies
+                Showing {slicedTechs.length} of {filteredTechs.length}{" "}
+                technologies
               </div>
             </div>
           </Fade>
@@ -191,24 +205,26 @@ const Experience = () => {
         <Fade direction="up" duration={1200} delay={400}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/30 text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="text-3xl font-bold text-cyan-400">{technologies.length}</div>
+              <div className="text-3xl font-bold text-cyan-400">
+                {technologies.length}
+              </div>
               <div className="text-gray-300 mt-2">Total Technologies</div>
             </div>
             <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30 text-center hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-3xl font-bold text-blue-400">
-                {categories.find(c => c.id === 'frontend')?.count}
+                {categories.find((c) => c.id === "frontend")?.count}
               </div>
               <div className="text-gray-300 mt-2">Frontend</div>
             </div>
             <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30 text-center hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-3xl font-bold text-green-400">
-                {categories.find(c => c.id === 'backend')?.count}
+                {categories.find((c) => c.id === "backend")?.count}
               </div>
               <div className="text-gray-300 mt-2">Backend</div>
             </div>
             <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 text-center hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-3xl font-bold text-purple-400">
-                {categories.find(c => c.id === 'tools')?.count}
+                {categories.find((c) => c.id === "tools")?.count}
               </div>
               <div className="text-gray-300 mt-2">Tools</div>
             </div>
@@ -217,6 +233,6 @@ const Experience = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Experience;

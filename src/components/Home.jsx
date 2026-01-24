@@ -5,7 +5,13 @@ import "./waving-emoji.css";
 import { Link } from "react-scroll";
 import Tilt from "react-parallax-tilt";
 import { FaCloudDownloadAlt, FaStar, FaRocket } from "react-icons/fa";
-import { SiReact, SiNodedotjs, SiMongodb, SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiTailwindcss,
+  SiNextdotjs,
+} from "react-icons/si";
 import ScrollReveal from "scrollreveal";
 import SocialLinks from "./SocialLinks";
 
@@ -72,7 +78,8 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden"
+      className="min-h-screen w-full relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-gray-950
+"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -88,14 +95,15 @@ const Home = () => {
       </div>
 
       <div className="max-w-7xl mx-auto flex flex-col items-center justify-center min-h-screen pt-24 pb-8 px-4 md:flex-row relative z-10 gap-8">
-
         {/* Text Content */}
         <div className="flex flex-col justify-center items-center md:items-start h-full text-center md:text-left mb-12 md:mb-0 md:flex-1">
           {/* Welcome Badge */}
           <div className="hi-text mb-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 backdrop-blur-sm">
               <FaStar className="text-cyan-400 mr-2" />
-              <span className="text-cyan-300 text-sm font-semibold">Welcome to my portfolio</span>
+              <span className="text-cyan-300 text-sm font-semibold">
+                Welcome to my portfolio
+              </span>
             </div>
           </div>
 
@@ -120,16 +128,20 @@ const Home = () => {
 
           {/* Description */}
           <p className="feature-info text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
-            With <span className="text-cyan-400 font-semibold">1+ year</span> of experience, 
-            I specialize in building modern web applications using cutting-edge technologies. 
-            Passionate about creating seamless user experiences and scalable solutions.
+            With <span className="text-cyan-400 font-semibold">1+ year</span> of
+            experience, I specialize in building modern web applications using
+            cutting-edge technologies. Passionate about creating seamless user
+            experiences and scalable solutions.
           </p>
 
           {/* Tech Stack Icons */}
           <div className="tech-stack mb-8">
             <div className="flex items-center gap-6">
               {techIcons.map((tech, index) => (
-                <div key={index} className="flex flex-col items-center group cursor-pointer">
+                <div
+                  key={index}
+                  className="flex flex-col items-center group cursor-pointer"
+                >
                   <div className="text-3xl p-3 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 group-hover:border-cyan-500/50 group-hover:transform group-hover:scale-110 transition-all duration-300">
                     {tech.icon}
                   </div>
@@ -151,13 +163,16 @@ const Home = () => {
             >
               <span className="flex items-center">
                 Explore My Work
-                <MdOutlineKeyboardArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <MdOutlineKeyboardArrowRight
+                  size={20}
+                  className="ml-2 group-hover:translate-x-1 transition-transform"
+                />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
             </Link>
 
             <a
-              href="https://drive.google.com/file/d/18d8oc95Jbl80fTK3v1mUK0Zk6e-hj8G0/view?usp=sharing"
+              href="https://drive.google.com/file/d/1s6YFWkwRXwNI0lbU-HiO2xUVEiwwk3bN/view?usp=sharing"
               download={true}
               target="_blank"
               rel="noreferrer"
@@ -165,7 +180,10 @@ const Home = () => {
             >
               <span className="flex items-center">
                 Download CV
-                <FaCloudDownloadAlt size={18} className="ml-2 group-hover:scale-110 transition-transform" />
+                <FaCloudDownloadAlt
+                  size={18}
+                  className="ml-2 group-hover:scale-110 transition-transform"
+                />
               </span>
             </a>
           </div>
@@ -196,7 +214,7 @@ const Home = () => {
             <div className="relative group">
               {/* Background Glow */}
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-1000 opacity-70 group-hover:opacity-100"></div>
-              
+
               {/* Image Container */}
               <div className="relative bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-2 group-hover:border-cyan-500/30 transition-all duration-500">
                 <img
