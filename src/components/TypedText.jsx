@@ -1,5 +1,5 @@
-import React from 'react';
-import Typed from 'typed.js';
+import React from "react";
+import Typed from "typed.js";
 
 function TypedText() {
   // Create reference to store the DOM element containing the animation
@@ -7,12 +7,11 @@ function TypedText() {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Web Developer', 'Video Editor', 'Web Designer'],
+      strings: ["Web Developer", "Video Editor", "Web Designer"],
       typeSpeed: 80,
       backSpeed: 30,
       backDelay: 2000,
       loop: true,
-      
     });
 
     return () => {

@@ -4,7 +4,14 @@ import portfolios from "../utils/data/portfolios.json";
 import { Dialog } from "primereact/dialog";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { FaGithub, FaExternalLinkAlt, FaPlay, FaCode, FaArrowRight, FaSpinner } from "react-icons/fa";
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaPlay,
+  FaCode,
+  FaArrowRight,
+  FaSpinner,
+} from "react-icons/fa";
 import { SiYoutube } from "react-icons/si";
 import "primereact/resources/themes/mdc-dark-deeppurple/theme.css";
 import "primereact/resources/primereact.min.css";
@@ -39,14 +46,16 @@ const Portfolio = () => {
         header={
           <div className="flex items-center gap-2">
             <FaPlay className="text-cyan-400" />
-            <span className="text-white font-bold">Project Demo: {project?.title}</span>
+            <span className="text-white font-bold">
+              Project Demo: {project?.title}
+            </span>
           </div>
         }
-        headerStyle={{ 
-          fontWeight: 600, 
+        headerStyle={{
+          fontWeight: 600,
           fontFamily: "inherit",
           background: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
-          borderBottom: "1px solid #334155"
+          borderBottom: "1px solid #334155",
         }}
         visible={visible}
         style={{
@@ -55,12 +64,12 @@ const Portfolio = () => {
           background: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
           border: "1px solid #334155",
           borderRadius: "16px",
-          boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
+          boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
         }}
         contentStyle={{
           background: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
           borderBottomLeftRadius: "16px",
-          borderBottomRightRadius: "16px"
+          borderBottomRightRadius: "16px",
         }}
         onHide={() => {
           setVisible(false);
@@ -76,7 +85,7 @@ const Portfolio = () => {
                 style={{
                   width: "100%",
                   height: matchesSM ? "400px" : "250px",
-                  border: "2px solid #334155"
+                  border: "2px solid #334155",
                 }}
                 src={videoLink}
                 title="YouTube video player"
@@ -98,7 +107,9 @@ const Portfolio = () => {
                 className="rounded-xl shadow-2xl"
                 style={{ width: matchesSM ? "70%" : "90%", maxWidth: "400px" }}
               />
-              <p className="text-gray-400 text-center">No demo video available</p>
+              <p className="text-gray-400 text-center">
+                No demo video available
+              </p>
             </div>
           )}
 
@@ -139,7 +150,7 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="w-full min-h-screen relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800"
+      className="w-full min-h-screen relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -155,7 +166,8 @@ const Portfolio = () => {
               My Projects
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              A collection of my recent work showcasing my skills in modern web development
+              A collection of my recent work showcasing my skills in modern web
+              development
             </p>
           </div>
         </Fade>
@@ -179,7 +191,7 @@ const Portfolio = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <button
@@ -207,20 +219,23 @@ const Portfolio = () => {
                     {project.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-4 flex-1">
-                    {project.description || "A modern web application built with cutting-edge technologies."}
+                    {project.description ||
+                      "A modern web application built with cutting-edge technologies."}
                   </p>
-                  
+
                   {/* Tech Stack */}
                   {project.technologies && (
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full border border-cyan-500/30"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                      {project.technologies
+                        .slice(0, 3)
+                        .map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full border border-cyan-500/30"
+                          >
+                            {tech}
+                          </span>
+                        ))}
                       {project.technologies.length > 3 && (
                         <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
                           +{project.technologies.length - 3}
@@ -274,10 +289,11 @@ const Portfolio = () => {
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </button>
               )}
-              
+
               {/* Progress Indicator */}
               <div className="text-gray-400 text-sm">
-                Showing {Math.min(elements, portfolios.length)} of {portfolios.length} projects
+                Showing {Math.min(elements, portfolios.length)} of{" "}
+                {portfolios.length} projects
               </div>
             </div>
           </Fade>
