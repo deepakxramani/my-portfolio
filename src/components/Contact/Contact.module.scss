@@ -1,0 +1,123 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.contact {
+  width: 100%;
+  min-height: auto;
+  padding: $spacing-4;
+  color: $white;
+  padding-top: $spacing-20;
+  position: relative;
+  overflow: hidden;
+  @include section-bg;
+}
+
+// Background
+.bgElements { position: absolute; inset: 0; overflow: hidden; }
+.blobTopRight { @include glow-blob($cyan-500, 15rem); top: -5rem; right: -5rem; }
+.blobBottomLeft { @include glow-blob($purple-500, 15rem); bottom: -5rem; left: -5rem; }
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-4;
+  justify-content: center;
+  max-width: 64rem;
+  margin: 0 auto;
+  min-height: auto;
+}
+
+.header {
+  padding-bottom: $spacing-8;
+}
+
+.title {
+  font-size: $text-4xl;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: 4px solid $gray-500;
+  @include gradient-text($cyan-400, $blue-500);
+}
+
+.subtitle {
+  padding: $spacing-6 0;
+  font-size: $text-lg;
+  color: $gray-300;
+}
+
+.formWrapper {
+  @include flex-center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  @include md {
+    width: 50%;
+  }
+}
+
+.input {
+  padding: $spacing-2;
+  background: transparent;
+  border: 2px solid $gray-600;
+  border-radius: $radius-md;
+  color: $white;
+  outline: none;
+  margin-bottom: $spacing-4;
+  font-family: inherit;
+  font-size: $text-base;
+  transition: border-color $transition-normal ease;
+
+  &:focus {
+    border-color: $cyan-500;
+  }
+
+  &::placeholder {
+    color: $gray-500;
+  }
+}
+
+.textarea {
+  padding: $spacing-2;
+  background: transparent;
+  border: 2px solid $gray-600;
+  border-radius: $radius-md;
+  color: $white;
+  outline: none;
+  font-family: inherit;
+  font-size: $text-base;
+  resize: vertical;
+  transition: border-color $transition-normal ease;
+
+  &:focus {
+    border-color: $cyan-500;
+  }
+
+  &::placeholder {
+    color: $gray-500;
+  }
+}
+
+.submitBtn {
+  color: $white;
+  background: linear-gradient(to bottom, $cyan-500, $blue-600);
+  padding: $spacing-3 $spacing-6;
+  margin: $spacing-8 auto;
+  display: flex;
+  align-items: center;
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  font-size: $text-base;
+  font-weight: 600;
+  transition: transform $transition-normal ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

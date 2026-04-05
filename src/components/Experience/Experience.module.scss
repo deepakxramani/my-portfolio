@@ -1,0 +1,259 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.experience {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  @include section-bg;
+}
+
+// Background
+.bgElements { position: absolute; inset: 0; overflow: hidden; }
+.blobTopRight { @include glow-blob($blue-500, 15rem); top: -5rem; right: -5rem; }
+.blobBottomLeft { @include glow-blob($green-500, 15rem); bottom: -5rem; left: -5rem; }
+
+// Icon colors
+.iconCyan { color: $cyan-400; }
+.iconBlue { color: $blue-400; }
+.iconGreen { color: $green-400; }
+.iconPurple { color: $purple-400; }
+
+// Container
+.container {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: $spacing-4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 6rem;
+}
+
+// Header
+.header { text-align: center; margin-bottom: $spacing-12; }
+
+.title {
+  font-size: $text-5xl;
+  font-weight: 700;
+  @include gradient-text($cyan-400, $blue-500);
+  margin-bottom: $spacing-4;
+
+  @include sm { font-size: $text-6xl; }
+}
+
+.subtitle {
+  font-size: $text-xl;
+  color: $gray-400;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+// Filters
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing-4;
+  margin-bottom: $spacing-12;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+  padding: $spacing-3 $spacing-6;
+  border-radius: $radius-xl;
+  font-weight: 600;
+  transition: all $transition-normal ease;
+  background: rgba($gray-800, 0.5);
+  backdrop-filter: blur(12px);
+  color: $gray-300;
+  border: 1px solid $gray-700;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgba($cyan-500, 0.5);
+    color: $white;
+  }
+}
+
+.filterActive {
+  background: linear-gradient(to right, $cyan-500, $blue-600);
+  color: $white;
+  border-color: transparent;
+  box-shadow: 0 25px 50px -12px rgba($cyan-500, 0.25);
+  transform: translateY(-4px);
+}
+
+.filterCount {
+  padding: $spacing-1 $spacing-2;
+  font-size: $text-xs;
+  border-radius: $radius-full;
+  background: $gray-700;
+  color: $gray-300;
+}
+
+.filterCountActive {
+  background: rgba($white, 0.2);
+  color: $white;
+}
+
+// Grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-6;
+  margin-bottom: $spacing-12;
+
+  @include sm { grid-template-columns: repeat(3, 1fr); }
+  @include lg { grid-template-columns: repeat(4, 1fr); }
+  @include xl { grid-template-columns: repeat(5, 1fr); }
+}
+
+// Tech Card
+.techCard {
+  position: relative;
+  @include glass-card(0.3);
+  padding: $spacing-6;
+  border-color: rgba($gray-700, 0.5);
+  @include flex-col-center;
+  height: 160px;
+  transition: all $transition-slow ease;
+
+  &:hover {
+    border-color: rgba($cyan-500, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba($cyan-500, 0.1);
+  }
+}
+
+.techGlow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba($cyan-500, 0.05), rgba($blue-500, 0.05));
+  border-radius: $radius-2xl;
+  opacity: 0;
+  transition: opacity $transition-slow ease;
+
+  .techCard:hover & { opacity: 1; }
+}
+
+.techIconWrapper {
+  position: relative;
+  z-index: 1;
+  transform: scale(1);
+  transition: transform $transition-slow ease;
+  margin-bottom: $spacing-4;
+
+  .techCard:hover & { transform: scale(1.1); }
+}
+
+.techIcon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.techName {
+  position: relative;
+  z-index: 1;
+  color: $white;
+  font-weight: 600;
+  text-align: center;
+  transition: color $transition-normal ease;
+
+  .techCard:hover & { color: $cyan-400; }
+}
+
+.techBadge {
+  position: relative;
+  z-index: 1;
+  margin-top: $spacing-2;
+}
+
+.categoryBadge {
+  padding: $spacing-1 $spacing-2;
+  font-size: $text-xs;
+  border-radius: $radius-full;
+  text-transform: capitalize;
+}
+
+.catFrontend { background: rgba($blue-500, 0.2); color: $blue-300; border: 1px solid rgba($blue-500, 0.3); }
+.catBackend { background: rgba($green-500, 0.2); color: $green-300; border: 1px solid rgba($green-500, 0.3); }
+.catTools { background: rgba($purple-500, 0.2); color: $purple-300; border: 1px solid rgba($purple-500, 0.3); }
+
+// Load More
+.loadMore { @include flex-col-center; gap: $spacing-6; }
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+  color: $cyan-400;
+}
+
+.spinner { animation: spin 1s linear infinite; }
+
+.loadMoreBtn {
+  @include btn-primary;
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+}
+
+.loadMoreArrow {
+  transition: transform $transition-normal ease;
+  .loadMoreBtn:hover & { transform: translateX(4px); }
+}
+
+.counter { color: $gray-400; font-size: $text-sm; }
+
+// All loaded
+.allLoaded { text-align: center; margin-top: $spacing-12; }
+
+.allLoadedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-2;
+  padding: $spacing-3 $spacing-6;
+  background: rgba($green-500, 0.2);
+  color: $green-400;
+  border-radius: $radius-full;
+  border: 1px solid rgba($green-500, 0.3);
+}
+
+// Stats
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-6;
+  margin-top: $spacing-16;
+
+  @include md { grid-template-columns: repeat(4, 1fr); }
+}
+
+.statCard {
+  @include glass-card(0.3);
+  padding: $spacing-6;
+  text-align: center;
+  transition: all $transition-normal ease;
+
+  &:hover { transform: scale(1.05); }
+}
+
+.statCyan { border-color: rgba($cyan-500, 0.3); .statNumber { color: $cyan-400; } }
+.statBlue { border-color: rgba($blue-500, 0.3); .statNumber { color: $blue-400; } }
+.statGreen { border-color: rgba($green-500, 0.3); .statNumber { color: $green-400; } }
+.statPurple { border-color: rgba($purple-500, 0.3); .statNumber { color: $purple-400; } }
+
+.statNumber { font-size: $text-3xl; font-weight: 700; }
+.statLabel { color: $gray-300; margin-top: $spacing-2; }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,93 @@
+// ============================================
+// Keyframe Animations
+// ============================================
+
+// -- Wave animation (hand emoji) --
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave {
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+// -- Spinner --
+@keyframes spinner-rotate {
+  100% { transform: rotate(1turn); }
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #474bff 94%, transparent) top/9px 9px no-repeat,
+    conic-gradient(transparent 30%, #474bff);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 9px), #000 0);
+  animation: spinner-rotate 1s infinite linear;
+}
+
+// -- Demo link blink --
+@keyframes demo-blink {
+  0% { opacity: 1; }
+  25% { color: #ef4444; opacity: 0; }
+  50% { opacity: 1; }
+  75% { color: #ef4444; opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.demoLink {
+  animation: demo-blink 4s forwards infinite;
+}
+
+// -- Bounce --
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+// -- Pulse --
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+// -- Spin --
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+// -- Shimmer sweep (for button hover) --
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(100%) skewX(-12deg); }
+}

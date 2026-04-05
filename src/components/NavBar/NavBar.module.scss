@@ -1,0 +1,89 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 $spacing-4;
+  color: $white;
+  background: $black;
+  position: fixed;
+  z-index: $z-50;
+}
+
+.logo {
+  font-size: $text-5xl;
+  font-weight: 400;
+  font-family: $font-signature;
+  margin-left: $spacing-2;
+}
+
+.desktopLinks {
+  display: none;
+  list-style: none;
+
+  @include lg {
+    display: flex;
+  }
+
+  .navItem {
+    padding: 0 $spacing-4;
+
+    button {
+      cursor: pointer;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: $text-xl;
+      color: $gray-500;
+      background: none;
+      border: none;
+      transition: transform $transition-fast ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  padding-right: $spacing-4;
+  z-index: $z-10;
+  color: $gray-500;
+
+  @include lg {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, $black, $gray-800);
+  color: $gray-500;
+  list-style: none;
+
+  .mobileItem {
+    padding: $spacing-6 $spacing-4;
+
+    button {
+      cursor: pointer;
+      text-transform: capitalize;
+      font-size: $text-4xl;
+      color: $gray-500;
+      background: none;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 35%;
+  left: 0;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.linkItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  height: 56px;
+  padding: 0 $spacing-4;
+  background: $gray-500;
+  margin-left: -100px;
+  transition: margin-left $transition-normal ease, border-radius $transition-normal ease;
+
+  &:hover {
+    margin-left: -10px;
+    border-radius: $radius-md;
+  }
+}
+
+.first {
+  border-top-right-radius: $radius-md;
+}
+
+.linkAnchor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: $white;
+}

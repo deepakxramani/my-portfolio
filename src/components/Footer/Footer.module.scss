@@ -1,0 +1,109 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+  width: 100%;
+  min-height: auto;
+  padding: $spacing-4;
+  color: $white;
+  position: relative;
+}
+
+.content {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 2.5rem 0;
+
+  @include sm {
+    flex-direction: row;
+  }
+
+  flex-direction: column;
+}
+
+.infoSection {
+  @include flex-col-center;
+}
+
+.name {
+  font-size: $text-3xl;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.4;
+
+  @include sm {
+    font-size: $text-4xl;
+  }
+}
+
+.quote {
+  margin: $spacing-2 $spacing-4;
+  color: #cacdd2;
+  max-width: 28rem;
+
+  @include sm {
+    font-size: $text-xl;
+  }
+}
+
+.socialSection {
+  @include flex-col-center;
+  margin-top: $spacing-6;
+}
+
+.getInTouch {
+  font-weight: 400;
+  font-family: $font-signature;
+  font-size: $text-4xl;
+
+  @include sm {
+    font-size: $text-5xl;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-4;
+  margin-top: $spacing-4;
+}
+
+.socialLink {
+  color: $white;
+  transition: color $transition-fast ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $cyan-500;
+  }
+}
+
+.copyright {
+  @include flex-center;
+}
+
+.copyrightText {
+  font-size: $text-sm;
+
+  @include sm {
+    margin-top: 6rem;
+    font-size: $text-xl;
+  }
+}
+
+.copyrightLink {
+  font-weight: 600;
+  background: none;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  font-size: inherit;
+  transition: color $transition-fast ease;
+
+  &:hover {
+    color: $cyan-500;
+  }
+}
