@@ -1,0 +1,122 @@
+// ============================================
+// Design Tokens & Variables
+// ============================================
+
+// -- Colors --
+$black: #000000;
+$white: #ffffff;
+
+// Grays
+$gray-50: #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+$gray-900: #111827;
+$gray-950: #030712;
+
+// Cyan
+$cyan-300: #67e8f9;
+$cyan-400: #22d3ee;
+$cyan-500: #06b6d4;
+$cyan-600: #0891b2;
+
+// Blue
+$blue-300: #93c5fd;
+$blue-400: #60a5fa;
+$blue-500: #3b82f6;
+$blue-600: #2563eb;
+$blue-700: #1d4ed8;
+
+// Purple
+$purple-300: #d8b4fe;
+$purple-400: #c084fc;
+$purple-500: #a855f7;
+$purple-600: #9333ea;
+
+// Green
+$green-300: #86efac;
+$green-400: #4ade80;
+$green-500: #22c55e;
+$green-600: #16a34a;
+
+// Red
+$red-400: #f87171;
+$red-500: #ef4444;
+$red-600: #ea2845;
+
+// Yellow
+$yellow-400: #facc15;
+
+// Sky
+$sky-500: #0ea5e9;
+
+// Orange
+$orange-500: #f97316;
+
+// -- Typography --
+$font-primary: var(--font-raleway), 'Raleway', sans-serif;
+$font-signature: var(--font-signature), 'Great Vibes', cursive;
+
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 1.875rem;
+$text-4xl: 2.25rem;
+$text-5xl: 3rem;
+$text-6xl: 3.75rem;
+$text-7xl: 4.5rem;
+
+// -- Spacing --
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
+$spacing-4: 1rem;
+$spacing-6: 1.5rem;
+$spacing-8: 2rem;
+$spacing-10: 2.5rem;
+$spacing-12: 3rem;
+$spacing-16: 4rem;
+$spacing-20: 5rem;
+$spacing-24: 6rem;
+
+// -- Border Radius --
+$radius-sm: 0.25rem;
+$radius-md: 0.375rem;
+$radius-lg: 0.5rem;
+$radius-xl: 0.75rem;
+$radius-2xl: 1rem;
+$radius-3xl: 1.5rem;
+$radius-full: 9999px;
+
+// -- Breakpoints --
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// -- Transitions --
+$transition-fast: 200ms;
+$transition-normal: 300ms;
+$transition-slow: 500ms;
+$transition-slower: 1000ms;
+
+// -- Shadows --
+$shadow-lg:
+  0 10px 15px -3px rgb(0 0 0 / 0.1),
+  0 4px 6px -4px rgb(0 0 0 / 0.1);
+$shadow-xl:
+  0 20px 25px -5px rgb(0 0 0 / 0.1),
+  0 8px 10px -6px rgb(0 0 0 / 0.1);
+$shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+// -- Z-index --
+$z-10: 10;
+$z-50: 50;

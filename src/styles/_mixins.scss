@@ -1,0 +1,140 @@
+// ============================================
+// Reusable Mixins
+// ============================================
+
+@use 'variables' as *;
+
+// -- Responsive Breakpoints --
+@mixin sm {
+  @media (min-width: $breakpoint-sm) { @content; }
+}
+
+@mixin md {
+  @media (min-width: $breakpoint-md) { @content; }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) { @content; }
+}
+
+@mixin xl {
+  @media (min-width: $breakpoint-xl) { @content; }
+}
+
+// -- Gradient Text --
+@mixin gradient-text($from: $cyan-400, $to: $blue-500) {
+  background: linear-gradient(to right, $from, $to);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin gradient-text-3($from: $cyan-400, $via: $blue-500, $to: $purple-600) {
+  background: linear-gradient(to right, $from, $via, $to);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// -- Glass Card --
+@mixin glass-card($bg-opacity: 0.3, $border-color: rgba($gray-700, 0.5)) {
+  background: rgba($gray-800, $bg-opacity);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid $border-color;
+  border-radius: $radius-2xl;
+}
+
+// -- Hover Lift --
+@mixin hover-lift($y: -4px) {
+  transition: transform $transition-normal ease, box-shadow $transition-normal ease;
+  &:hover {
+    transform: translateY($y);
+  }
+}
+
+// -- Flex Center --
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// -- Background Glow Blob --
+@mixin glow-blob($color, $size: 20rem) {
+  position: absolute;
+  width: $size;
+  height: $size;
+  background: rgba($color, 0.1);
+  border-radius: $radius-full;
+  filter: blur(64px);
+}
+
+// -- Section Background (transparent — uses body gradient) --
+@mixin section-bg {
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+// -- Badge / Pill --
+@mixin pill($bg, $color, $border: transparent) {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-1 $spacing-3;
+  border-radius: $radius-full;
+  font-size: $text-sm;
+  font-weight: 600;
+  background: $bg;
+  color: $color;
+  border: 1px solid $border;
+}
+
+// -- Button Gradient --
+@mixin btn-primary {
+  background: linear-gradient(to right, $cyan-500, $blue-600);
+  color: $white;
+  font-weight: 600;
+  padding: $spacing-4 $spacing-8;
+  border-radius: $radius-xl;
+  border: none;
+  cursor: pointer;
+  transition: all $transition-normal ease;
+
+  &:hover {
+    background: linear-gradient(to right, $cyan-600, $blue-700);
+    box-shadow: 0 25px 50px -12px rgba($cyan-500, 0.25);
+    transform: translateY(-4px);
+  }
+}
+
+@mixin btn-secondary {
+  background: rgba($gray-800, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid $gray-700;
+  color: $white;
+  font-weight: 600;
+  padding: $spacing-4 $spacing-8;
+  border-radius: $radius-xl;
+  cursor: pointer;
+  transition: all $transition-normal ease;
+
+  &:hover {
+    border-color: rgba($cyan-500, 0.5);
+    box-shadow: 0 25px 50px -12px rgba($cyan-500, 0.1);
+    transform: translateY(-4px);
+  }
+}

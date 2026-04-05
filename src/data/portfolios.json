@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "MedBazzar (E-Commerce Website)",
+    "title": "MedBazzar",
+    "description": "A full-featured e-commerce web application for medical supplies with user authentication, cart management, and payment integration.",
+    "technologies": ["React", "Node.js", "MongoDB", "Express", "Redux"],
+    "src": "/assets/medbazzar.jpg",
+    "demolink": "https://medbazzar.netlify.app/",
+    "videolink": "https://www.youtube-nocookie.com/embed/NUfMm5MDu78?si=V09vwBuCBI_eRMmh?rel=0&amp;autoplay=1&mute=1",
+    "codelink": "https://github.com/deepakxramani?tab=repositories"
+  },
+  {
+    "id": 2,
+    "name": "Promptnation",
+    "title": "Promptnation",
+    "description": "An AI prompt sharing platform built with Next.js where users can discover, create, and share creative AI prompts.",
+    "technologies": ["Next.js", "MongoDB", "NextAuth", "Tailwind CSS"],
+    "src": "/assets/promptnation.jpg",
+    "demolink": "https://promptnation-by-deepakramani.vercel.app/",
+    "videolink": "",
+    "codelink": "https://github.com/deepakxramani/promptnation"
+  },
+  {
+    "id": 3,
+    "name": "Auth SignUp/Login App",
+    "title": "Auth MERN App",
+    "description": "A secure authentication system with sign-up, login, and protected routes using JWT tokens and the MERN stack.",
+    "technologies": ["React", "Node.js", "MongoDB", "Express", "JWT"],
+    "src": "/assets/authMernApp.jpg",
+    "demolink": "https://auth-mern-app-1-ui.vercel.app/login",
+    "videolink": "",
+    "codelink": "https://github.com/deepakxramani/auth_mern_app_1"
+  },
+  {
+    "id": 4,
+    "name": "Calculator App",
+    "title": "CalculateMe",
+    "description": "A sleek and responsive calculator application built with vanilla JavaScript featuring modern UI design.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "src": "/assets/calculateMe.jpg",
+    "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "videolink": "",
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
+  },
+  {
+    "id": 5,
+    "name": "CloudlyFy Weather Forecast App",
+    "title": "CloudlyFy",
+    "description": "A weather forecast application with real-time data, location search, and beautiful weather visualizations.",
+    "technologies": ["HTML", "CSS", "JavaScript", "Weather API"],
+    "src": "/assets/cloudlyWeather.jpg",
+    "demolink": "https://cloudlyfy.netlify.app/",
+    "videolink": "",
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/03%20weather%20app"
+  },
+  {
+    "id": 6,
+    "name": "React Weather App",
+    "title": "React Weather",
+    "description": "A modern weather application built with React, featuring dynamic backgrounds and detailed weather metrics.",
+    "technologies": ["React", "CSS", "Weather API"],
+    "src": "/assets/reactWeather.jpg",
+    "demolink": "https://calculateme-deepakxramani.netlify.app/",
+    "videolink": "",
+    "codelink": "https://github.com/deepakxramani/vanilla-js-projects/tree/main/01%20Calculator"
+  }
+]

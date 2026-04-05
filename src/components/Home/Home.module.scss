@@ -1,0 +1,502 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+// Background blobs
+.bgElements {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.blobTopRight {
+  @include glow-blob($cyan-500);
+  top: -10rem;
+  right: -8rem;
+}
+
+.blobBottomLeft {
+  @include glow-blob($purple-500);
+  bottom: -10rem;
+  left: -8rem;
+}
+
+.blobCenter {
+  @include glow-blob($blue-500, 24rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+// Desktop social
+.desktopSocial {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  z-index: $z-50;
+
+  @include lg {
+    display: flex;
+  }
+}
+
+// Main content
+.content {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 6rem $spacing-4 $spacing-8;
+  position: relative;
+  z-index: $z-10;
+  gap: $spacing-8;
+
+  @include md {
+    flex-direction: row;
+  }
+}
+
+// Text content
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  margin-bottom: $spacing-12;
+
+  @include md {
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 0;
+    flex: 1;
+  }
+}
+
+// Welcome badge
+.welcomeBadge {
+  margin-bottom: $spacing-6;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-2 $spacing-4;
+  border-radius: $radius-full;
+  background: rgba($cyan-500, 0.2);
+  border: 1px solid rgba($cyan-500, 0.3);
+  backdrop-filter: blur(12px);
+}
+
+.badgeIcon {
+  color: $cyan-400;
+  margin-right: $spacing-2;
+}
+
+.badgeText {
+  color: $cyan-300;
+  font-size: $text-sm;
+  font-weight: 600;
+}
+
+// Main heading
+.heading {
+  font-size: $text-4xl;
+  font-weight: 700;
+  color: $white;
+  margin-bottom: $spacing-4;
+
+  @include sm {
+    font-size: $text-6xl;
+  }
+
+  @include lg {
+    font-size: $text-7xl;
+  }
+}
+
+.gradientName {
+  @include gradient-text-3($cyan-400, $blue-500, $purple-600);
+}
+
+// Role section
+.role {
+  margin-bottom: $spacing-6;
+}
+
+.roleText {
+  font-size: $text-2xl;
+  color: $gray-300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-2;
+
+  @include sm {
+    font-size: $text-4xl;
+    flex-direction: row;
+  }
+}
+
+.roleTyped {
+  display: flex;
+  align-items: center;
+}
+
+.typedHighlight {
+  color: $cyan-400;
+  font-weight: 700;
+  margin-left: $spacing-2;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+// Description
+.description {
+  font-size: $text-lg;
+  color: $gray-400;
+  margin-bottom: $spacing-8;
+  max-width: 42rem;
+  line-height: 1.8;
+
+  @include sm {
+    font-size: $text-xl;
+  }
+}
+
+.highlight {
+  color: $cyan-400;
+  font-weight: 600;
+}
+
+// Tech stack
+.techStack {
+  margin-bottom: $spacing-8;
+}
+
+.techIcons {
+  display: flex;
+  align-items: center;
+  gap: $spacing-6;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.techIconBox {
+  font-size: $text-3xl;
+  padding: $spacing-3;
+  background: rgba($gray-800, 0.5);
+  backdrop-filter: blur(12px);
+  border-radius: $radius-xl;
+  border: 1px solid $gray-700;
+  transition: all $transition-normal ease;
+
+  .techItem:hover & {
+    border-color: rgba($cyan-500, 0.5);
+    transform: scale(1.1);
+  }
+}
+
+.techName {
+  font-size: $text-xs;
+  color: $gray-400;
+  margin-top: $spacing-2;
+  transition: color $transition-normal ease;
+
+  .techItem:hover & {
+    color: $cyan-400;
+  }
+}
+
+// Icon colors
+.iconCyan {
+  color: $cyan-400;
+}
+.iconWhite {
+  color: $white;
+}
+.iconGreen {
+  color: $green-500;
+}
+.iconRed {
+  color: $red-600;
+}
+.iconGreenDark {
+  color: $green-600;
+}
+.iconBlue {
+  color: $blue-400;
+}
+
+// CTA Buttons
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+  width: 100%;
+
+  @include sm {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.btnPrimary {
+  @include btn-primary;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnSecondary {
+  @include btn-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnContent {
+  display: flex;
+  align-items: center;
+}
+
+.btnArrow {
+  margin-left: $spacing-2;
+  transition: transform $transition-normal ease;
+
+  .btnPrimary:hover & {
+    transform: translateX(4px);
+  }
+}
+
+.btnIcon {
+  margin-left: $spacing-2;
+  transition: transform $transition-normal ease;
+
+  .btnSecondary:hover & {
+    transform: scale(1.1);
+  }
+}
+
+.shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba($white, 0.1),
+    transparent
+  );
+  transform: translateX(-100%) skewX(-12deg);
+  transition: transform $transition-slower ease;
+
+  .btnPrimary:hover & {
+    transform: translateX(100%) skewX(-12deg);
+  }
+}
+
+// Available badge
+.availableBadge {
+  margin-top: $spacing-8;
+}
+
+.availableContent {
+  display: flex;
+  align-items: center;
+  gap: $spacing-2;
+  font-size: $text-sm;
+  color: $gray-400;
+}
+
+.availableDot {
+  width: 8px;
+  height: 8px;
+  background: $green-400;
+  border-radius: $radius-full;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+// Hero image
+.heroImage {
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @include md {
+    display: flex;
+  }
+}
+
+.tiltWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.imageGroup {
+  position: relative;
+}
+
+.imageGlow {
+  position: absolute;
+  inset: -1rem;
+  background: linear-gradient(
+    to right,
+    rgba($cyan-500, 0.2),
+    rgba($blue-500, 0.2)
+  );
+  border-radius: $radius-3xl;
+  filter: blur(20px);
+  opacity: 0.7;
+  transition: all $transition-slower ease;
+
+  .imageGroup:hover & {
+    filter: blur(40px);
+    opacity: 1;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  background: rgba($gray-800, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba($gray-700, 0.5);
+  border-radius: $radius-2xl;
+  padding: $spacing-2;
+  transition: all $transition-slow ease;
+
+  .imageGroup:hover & {
+    border-color: rgba($cyan-500, 0.3);
+  }
+}
+
+.image {
+  border-radius: $radius-2xl;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform $transition-slow ease;
+
+  .imageGroup:hover & {
+    transform: scale(1.05);
+  }
+}
+
+// Floating elements
+.floatingRocket {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 32px;
+  height: 32px;
+  background: $cyan-500;
+  border-radius: $radius-full;
+  @include flex-center;
+  animation: bounce 1s infinite;
+}
+
+.rocketIcon {
+  color: $white;
+  font-size: $text-sm;
+}
+
+.floatingDot {
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
+  width: 24px;
+  height: 24px;
+  background: $purple-500;
+  border-radius: $radius-full;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+// Scroll indicator
+.scrollIndicator {
+  position: absolute;
+  bottom: $spacing-8;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+
+  @include md {
+    display: block;
+  }
+}
+
+.scrollContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $gray-400;
+}
+
+.scrollText {
+  font-size: $text-sm;
+  margin-bottom: $spacing-2;
+}
+
+.scrollMouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid $gray-600;
+  border-radius: $radius-full;
+  display: flex;
+  justify-content: center;
+}
+
+.scrollDot {
+  width: 4px;
+  height: 12px;
+  background: $cyan-500;
+  border-radius: $radius-full;
+  margin-top: $spacing-2;
+  animation: bounce 1s infinite;
+}
+
+// Keyframes
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}

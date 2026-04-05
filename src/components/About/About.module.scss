@@ -1,0 +1,269 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.about {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  @include section-bg;
+}
+
+// Background
+.bgElements {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.blobTopRight { @include glow-blob($cyan-500); top: -10rem; right: -8rem; }
+.blobBottomLeft { @include glow-blob($purple-500); bottom: -10rem; left: -8rem; }
+.blobCenter { @include glow-blob($blue-500, 24rem); top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.5; }
+
+// Icon colors
+.iconBlue { color: $blue-400; }
+.iconGreen { color: $green-400; }
+.iconPurple { color: $purple-400; }
+.iconYellow { color: $yellow-400; }
+.iconRed { color: $red-400; }
+
+// Main content
+.mainContent {
+  position: relative;
+  min-height: 100vh;
+  padding-top: $spacing-20;
+  padding-bottom: $spacing-20;
+}
+
+.container {
+  max-width: 72rem;
+  padding: $spacing-4;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+// Header
+.header {
+  padding-bottom: $spacing-12;
+}
+
+.title {
+  font-size: $text-5xl;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: 4px solid $cyan-500;
+  @include gradient-text($cyan-500, $blue-500);
+}
+
+.subtitle {
+  font-size: $text-xl;
+  margin-top: $spacing-4;
+  color: $gray-300;
+}
+
+// Timeline
+.timeline {
+  position: relative;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 2rem;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, $cyan-500, $purple-500, $blue-500);
+  border-radius: $radius-full;
+
+  @include md {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timelineItems {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-12;
+  margin-left: $spacing-4;
+
+  @include md {
+    margin-left: 0;
+  }
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include md {
+    &.right {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+// Node
+.timelineNode {
+  position: absolute;
+  left: 1.5rem;
+  z-index: $z-10;
+
+  @include md {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.nodeCurrentPulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.nodeDot {
+  width: 24px;
+  height: 24px;
+  border-radius: $radius-full;
+  border-width: 4px;
+  border-style: solid;
+}
+
+.nodeCurrent { border-color: $cyan-400; background: $cyan-600; }
+.nodeProfessional { border-color: $green-400; background: $green-600; }
+.nodeEducation { border-color: $purple-400; background: $purple-600; }
+
+// Card
+.cardWrapper {
+  margin-left: 4rem;
+
+  @include md {
+    margin-left: 0;
+    width: 41.666%;
+
+    .left & {
+      padding-right: $spacing-8;
+    }
+
+    .right & {
+      padding-left: $spacing-8;
+      margin-left: auto;
+    }
+  }
+}
+
+.card {
+  background: rgba($gray-800, 0.5);
+  backdrop-filter: blur(12px);
+  border-radius: $radius-xl;
+  padding: $spacing-6;
+  border-left: 4px solid;
+  transition: all $transition-normal ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $shadow-2xl;
+  }
+}
+
+.cardCurrent { border-left-color: $cyan-500; box-shadow: 0 10px 15px -3px rgba($cyan-500, 0.2); }
+.cardProfessional { border-left-color: $green-500; }
+.cardEducation { border-left-color: $purple-500; }
+
+// Year badge
+.yearBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-1 $spacing-3;
+  border-radius: $radius-full;
+  font-size: $text-sm;
+  font-weight: 600;
+}
+
+.badgeCurrent { background: rgba($cyan-500, 0.2); color: $cyan-300; }
+.badgeProfessional { background: rgba($green-500, 0.2); color: $green-300; }
+.badgeEducation { background: rgba($purple-500, 0.2); color: $purple-300; }
+
+.yearText { margin-left: $spacing-2; }
+
+// Card content
+.cardTitle { font-size: $text-2xl; font-weight: 700; margin-top: $spacing-4; color: $white; }
+.cardCompany { font-size: $text-lg; color: $cyan-300; margin-top: $spacing-2; font-weight: 600; }
+.cardRole { color: $gray-300; margin-top: $spacing-2; }
+.cardDuration { font-size: $text-sm; margin-top: $spacing-3; font-weight: 600; color: $gray-400; }
+.durationCurrent { color: $cyan-400; }
+
+.currentBadge {
+  display: inline-flex;
+  align-items: center;
+  margin-top: $spacing-3;
+  padding: $spacing-1 $spacing-3;
+  border-radius: $radius-full;
+  background: rgba($cyan-500, 0.2);
+  color: $cyan-300;
+  font-size: $text-sm;
+}
+
+.currentDot {
+  width: 8px;
+  height: 8px;
+  border-radius: $radius-full;
+  background: $cyan-400;
+  margin-right: $spacing-2;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+// Start point
+.startPoint {
+  position: absolute;
+  left: 1.5rem;
+  bottom: -1rem;
+  z-index: $z-10;
+
+  @include md {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.mapIcon {
+  font-size: $text-2xl;
+  color: $red-400;
+}
+
+// Summary grid
+.summaryGrid {
+  margin-top: $spacing-20;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-6;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.summaryCard {
+  @include glass-card(0.5);
+  padding: $spacing-6;
+  text-align: center;
+  transition: all $transition-normal ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.summaryCyan { border-color: rgba($cyan-500, 0.3); .summaryNumber { color: $cyan-400; } }
+.summaryGreen { border-color: rgba($green-500, 0.3); .summaryNumber { color: $green-400; } }
+.summaryPurple { border-color: rgba($purple-500, 0.3); .summaryNumber { color: $purple-400; } }
+
+.summaryNumber { font-size: $text-3xl; font-weight: 700; }
+.summaryLabel { color: $gray-300; margin-top: $spacing-2; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
