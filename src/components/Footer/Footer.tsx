@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import React from "react";
-import { BsLinkedin, BsGithub, BsTwitterX, BsInstagram } from "react-icons/bs";
-import styles from "./Footer.module.scss";
+import React from 'react';
+import { BsLinkedin, BsGithub, BsTwitterX, BsInstagram } from 'react-icons/bs';
+import styles from './Footer.module.scss';
 
 const Footer = () => {
   const scrollToHome = () => {
-    const element = document.getElementById("home");
+    const element = document.getElementById('home');
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -18,8 +18,8 @@ const Footer = () => {
         <div className={styles.infoSection}>
           <h2 className={styles.name}>Deepak Ramani</h2>
           <p className={styles.quote}>
-            &quot;I&apos;m not gonna run away, I never go back on my word! That&apos;s my
-            nindo: my ninja way!&quot;
+            I&apos;m not gonna run away, I never go back on my word! That&apos;s
+            my nindo: my ninja way!;
           </p>
         </div>
 
@@ -27,33 +27,33 @@ const Footer = () => {
           <h2 className={styles.getInTouch}>Get in Touch</h2>
           <div className={styles.socialLinks}>
             <a
-              href="https://www.linkedin.com/in/deepakxramani/"
-              target="_blank"
-              rel="noreferrer"
+              href='https://www.linkedin.com/in/deepakxramani/'
+              target='_blank'
+              rel='noreferrer'
               className={styles.socialLink}
             >
               <BsLinkedin size={30} />
             </a>
             <a
-              href="https://github.com/deepakxramani"
-              target="_blank"
-              rel="noreferrer"
+              href='https://github.com/deepakxramani'
+              target='_blank'
+              rel='noreferrer'
               className={styles.socialLink}
             >
               <BsGithub size={30} />
             </a>
             <a
-              href="https://x.com/deepakxramani"
-              target="_blank"
-              rel="noreferrer"
+              href='https://x.com/deepakxramani'
+              target='_blank'
+              rel='noreferrer'
               className={styles.socialLink}
             >
               <BsTwitterX size={30} />
             </a>
             <a
-              href="https://www.instagram.com/deepakxramani/"
-              target="_blank"
-              rel="noreferrer"
+              href='https://www.instagram.com/deepakxramani/'
+              target='_blank'
+              rel='noreferrer'
               className={styles.socialLink}
             >
               <BsInstagram size={30} />
@@ -64,7 +64,7 @@ const Footer = () => {
 
       <div className={styles.copyright}>
         <p className={styles.copyrightText}>
-          Copyright &#169; 2024{" "}
+          Copyright &#169; 2026{' '}
           <button onClick={scrollToHome} className={styles.copyrightLink}>
             Deepak Ramani
           </button>
