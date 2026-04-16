@@ -124,7 +124,7 @@ const Home = () => {
               </button>
 
               <a
-                href='https://drive.google.com/file/d/1M2Rt74ofQdwb9pV2zJnksoxYk-WD7JcC/view?usp=sharing'
+                href='https://drive.google.com/file/d/1GdwVv0kGd7KlQGMbDsNPlVIDaz0isJTN/view?usp=sharing'
                 download={true}
                 target='_blank'
                 rel='noreferrer'
